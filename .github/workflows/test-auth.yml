@@ -1,0 +1,19 @@
+name: Test Power Platform Authentication
+
+on:
+  workflow_dispatch: # Allows manual triggering from GitHub Actions
+
+jobs:
+  test-auth:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Authenticate with Power Platform
+        uses: microsoft/powerplatform-actions/authenticate@v0
+        with:
+          environment-url: ${{ secrets.DATAVERSE_URL }}
+          app-id: ${{ secrets.APPLICATION_ID }}
+          tenant-id: ${{ secrets.TENANT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+
+      - name: Output success message
+        run: echo "Authentication successful!"
