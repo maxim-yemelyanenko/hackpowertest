@@ -1,0 +1,34 @@
+name: Export Power Platform Solution
+
+on:
+  workflow_dispatch:  # Allows manual triggering from GitHub Actions
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Authenticate with Power Platform
+        uses: microsoft/powerplatform-actions/authenticate@v0
+        with:
+          environment-url: ${{ secrets.DATAVERSE_URL }}
+          app-id: ${{ secrets.APPLICATION_ID }}
+          tenant-id: ${{ secrets.TENANT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+
+      - name: Export Solution
+        uses: microsoft/powerplatform-actions/export-solution@v0
+        with:
+          solution-name: "CompanyInfoFinderMaxTest"
+          managed: false
+          path: "Solutions"
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add Solutions/
+          git commit -m "Export Power Platform Solution"
+          git push
