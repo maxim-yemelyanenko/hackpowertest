@@ -6,7 +6,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-22.04   # alternate runner OS is: ubuntu-latest
+    runs-on: windows-latest   # alternate runner OS is: ubuntu-latest
 
     steps:
     - name: Install Power Platform Tools
