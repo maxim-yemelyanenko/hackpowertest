@@ -9,15 +9,19 @@ jobs:
     runs-on: windows-latest   # alternate runner OS is: ubuntu-latest
 
     steps:
-    - name: Install Power Platform Tools
-      uses: microsoft/powerplatform-actions/actions-install@v1
+    #- name: Install Power Platform Tools
+    #  uses: microsoft/powerplatform-actions/actions-install@v1
+
+    - name: Cleanup old Power Platform CLI
+      run: |
+        rm -rf $env:LOCALAPPDATA\Temp\powerplatform-actions-*
 
     - name: Install Power Platform CLI
       run: |
         dotnet tool install --global Microsoft.PowerApps.CLI.Tool
 
     - name: Wait for installation
-      run: sleep 10
+      run: sleep 15
 
     - name: Export Solution
       uses: microsoft/powerplatform-actions/export-solution@v1
