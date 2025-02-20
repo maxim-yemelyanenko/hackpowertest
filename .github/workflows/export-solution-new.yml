@@ -34,7 +34,7 @@ jobs:
     - name: Publish Solution
       uses: microsoft/powerplatform-actions/publish-solution@v1
       with:
-        environment-url: ${{ secrets.DATAVERSE_URL }}
+        environment-url: 'https://org38dde50d.crm.dynamics.com'
         app-id: ${{ secrets.APPLICATION_ID }}
         tenant-id: ${{ secrets.TENANT_ID }}
         client-secret: ${{ secrets.CLIENT_SECRET }}
