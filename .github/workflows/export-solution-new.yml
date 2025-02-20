@@ -24,7 +24,7 @@ jobs:
 
     #- name: Check if PAC is available
     #  run: which pac
-	
+
     - name: Debug Auth Vars
       run: echo "${{ secrets.APPLICATION_ID }}, ${{ secrets.TENANT_ID }}"
 
