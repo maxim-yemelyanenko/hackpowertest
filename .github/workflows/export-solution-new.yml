@@ -12,10 +12,6 @@ jobs:
     #- name: Install Power Platform Tools
     #  uses: microsoft/powerplatform-actions/actions-install@v1
 
-    - name: Cleanup old Power Platform CLI
-      run: |
-        rm -rf $env:LOCALAPPDATA\Temp\powerplatform-actions-*
-
     - name: Install Power Platform CLI
       run: |
         dotnet tool install --global Microsoft.PowerApps.CLI.Tool
