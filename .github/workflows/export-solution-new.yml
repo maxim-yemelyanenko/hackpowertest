@@ -25,8 +25,8 @@ jobs:
     #- name: Check if PAC is available
     #  run: which pac
 	
-	- name: Debug Auth Vars
-	  run: echo "App ID: ${{ secrets.APPLICATION_ID }}, Tenant: ${{ secrets.TENANT_ID }}"
+    - name: Debug Auth Vars
+      run: echo "${{ secrets.APPLICATION_ID }}, ${{ secrets.TENANT_ID }}"
 
     - name: Export Solution
       uses: microsoft/powerplatform-actions/export-solution@v1
