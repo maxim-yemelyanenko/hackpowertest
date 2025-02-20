@@ -12,9 +12,29 @@ jobs:
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
 
+    #- name: Install Power Platform CLI
+    #  run: |
+    #    dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+
+    #- name: Wait for installation
+    #  run: sleep 5
+
+    #- name: Add PAC to PATH
+    #  run: echo "$env:POWERPLATFORMTOOLS_PACPATH" | Split-Path | Out-File -Append -Encoding ascii $env:GITHUB_PATH
+
+    #- name: Check if PAC is available
+    #  run: which pac
+	
+	- name: Debug Auth Vars
+	  run: echo "App ID: ${{ secrets.APPLICATION_ID }}, Tenant: ${{ secrets.TENANT_ID }}"
+
     - name: Export Solution
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
+        #environment-url: ${{ secrets.DATAVERSE_URL }}
+        #app-id: ${{ secrets.APPLICATION_ID }}
+        #tenant-id: ${{ secrets.TENANT_ID }}
+        #client-secret: ${{ secrets.CLIENT_SECRET }}
         environment-url: 'https://org38dde50d.crm.dynamics.com'
         user-name: 'maxim.yemelyanenko@akvelon.com'
         password-secret: ${{ secrets.MYPASSWORD }}
@@ -22,25 +42,25 @@ jobs:
         solution-output-file: 'CompanyInfoFinderMaxTest.zip'
         working-directory: 'out'
 
-    - name: Unpack Solution
-      uses: microsoft/powerplatform-actions/unpack-solution@v1
-      with:
-        solution-file: 'out/CompanyInfoFinderMaxTest1.zip'
-        solution-folder: 'out/solutions/CompanyInfoFinderMaxTest one'
-        solution-type: 'Unmanaged'
-        overwrite-files: true
+    #- name: Unpack Solution
+    #  uses: microsoft/powerplatform-actions/unpack-solution@v1
+    #  with:
+    #    solution-file: 'out/CompanyInfoFinderMaxTest1.zip'
+    #    solution-folder: 'out/solutions/CompanyInfoFinderMaxTest one'
+    #    solution-type: 'Unmanaged'
+    #    overwrite-files: true
 
-    - name: Publish Solution
-      uses: microsoft/powerplatform-actions/publish-solution@v1
-      with:
-        environment-url: 'https://org38dde50d.crm.dynamics.com'
-        app-id: ${{ secrets.APPLICATION_ID }}
-        tenant-id: ${{ secrets.TENANT_ID }}
-        client-secret: ${{ secrets.CLIENT_SECRET }}
+    #- name: Publish Solution
+    #  uses: microsoft/powerplatform-actions/publish-solution@v1
+    #  with:
+    #    environment-url: ${{ secrets.DATAVERSE_URL }}
+    #    app-id: ${{ secrets.APPLICATION_ID }}
+    #    tenant-id: ${{ secrets.TENANT_ID }}
+    #    client-secret: ${{ secrets.CLIENT_SECRET }}
 
-    - name: Prepare solution changes for check-in into source control
-      uses: microsoft/powerplatform-actions/branch-solution@v1
-      with:
-        solution-folder: 'out/solutions/CompanyInfoFinderMaxTest one'
-        solution-target-folder: 'src/solutions/solution1'
-        token: ${{ secrets.GITHUB_TOKEN }}
+    #- name: Prepare solution changes for check-in into source control
+    #  uses: microsoft/powerplatform-actions/branch-solution@v1
+    #  with:
+    #    solution-folder: 'out/solutions/CompanyInfoFinderMaxTest one'
+    #    solution-target-folder: 'src/solutions/solution1'
+    #    token: ${{ secrets.GITHUB_TOKEN }}
