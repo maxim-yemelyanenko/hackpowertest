@@ -12,9 +12,6 @@ jobs:
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
 
-    - name: Check if PAC is available
-      run: which pac
-
     #- name: Install Power Platform CLI
     #  run: |
     #    dotnet tool install --global Microsoft.PowerApps.CLI.Tool
@@ -27,6 +24,9 @@ jobs:
 
     #- name: Check PAC version
     #  run: pac --version
+
+    - name: Check if PAC is available
+      run: which pac
 
     - name: Debug GITHUB_PATH
       run: echo $GITHUB_PATH
