@@ -32,7 +32,7 @@ jobs:
         #app-id: ${{ secrets.APPLICATION_ID }}
         #tenant-id: ${{ secrets.TENANT_ID }}
         #client-secret: ${{ secrets.CLIENT_SECRET }}
-		user-name: 'maxim.yemelyanenko@akvelon.com'
+        user-name: 'maxim.yemelyanenko@akvelon.com'
         password-secret: ${{ secrets.MYPASSWORD }}
         solution-name: CompanyInfoFinderMaxTest
         solution-output-file: 'CompanyInfoFinderMaxTest.zip'
