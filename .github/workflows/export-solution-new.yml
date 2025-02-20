@@ -16,8 +16,9 @@ jobs:
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
         environment-url: 'https://org38dde50d.crm.dynamics.com'
-        user-name: 'maxim.yemelyanenko@akvelon.com'
-        password-secret: ${{ secrets.MYPASSWORD }}
+        app-id: ${{ secrets.APPLICATION_ID }}
+        tenant-id: ${{ secrets.TENANT_ID }}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
         solution-name: CompanyInfoFinderMaxTest
         solution-output-file: 'CompanyInfoFinderMaxTest.zip'
         working-directory: 'out'
@@ -33,9 +34,10 @@ jobs:
     - name: Publish Solution
       uses: microsoft/powerplatform-actions/publish-solution@v1
       with:
-        environment-url: 'https://org38dde50d.crm.dynamics.com'
-        user-name: 'maxim.yemelyanenko@akvelon.com'
-        password-secret: ${{ secrets.MYPASSWORD }}
+        environment-url: ${{ secrets.DATAVERSE_URL }}
+        app-id: ${{ secrets.APPLICATION_ID }}
+        tenant-id: ${{ secrets.TENANT_ID }}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
 
     - name: Prepare solution changes for check-in into source control
       uses: microsoft/powerplatform-actions/branch-solution@v1
