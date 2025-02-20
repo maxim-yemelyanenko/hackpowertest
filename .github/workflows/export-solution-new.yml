@@ -22,8 +22,8 @@ jobs:
     #- name: Add PAC to PATH
     #  run: echo "$env:POWERPLATFORMTOOLS_PACPATH" | Split-Path | Out-File -Append -Encoding ascii $env:GITHUB_PATH
 
-    - name: Check if PAC is available
-      run: which pac
+    #- name: Check if PAC is available
+    #  run: which pac
 
     - name: Export Solution
       uses: microsoft/powerplatform-actions/export-solution@v1
