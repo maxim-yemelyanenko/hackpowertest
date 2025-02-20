@@ -22,8 +22,8 @@ jobs:
     - name: Add PAC to PATH
       run: echo "$env:POWERPLATFORMTOOLS_PACPATH" | Split-Path | Out-File -Append -Encoding ascii $env:GITHUB_PATH
 
-    - name: Check PAC version
-      run: pac --version
+    #- name: Check PAC version
+    #  run: pac --version
 
     - name: Debug PATH
       run: echo $PATH
