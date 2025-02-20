@@ -12,6 +12,9 @@ jobs:
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
 
+    - name: Wait for installation
+      run: sleep 10
+
     - name: Export Solution
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
