@@ -21,7 +21,7 @@ jobs:
 
     - name: Debug PATH
       run: echo $PATH
-	  
+
     - name: Check if PAC is available
       run: which pac
   
