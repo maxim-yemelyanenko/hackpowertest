@@ -5,10 +5,10 @@ on:
 
 jobs:
   test-auth:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Authenticate with Power Platform
-        uses: microsoft/powerplatform-actions/authenticate@v0
+        uses: microsoft/powerplatform-actions/authenticate@v1
         with:
           environment-url: ${{ secrets.DATAVERSE_URL }}
           app-id: ${{ secrets.APPLICATION_ID }}
