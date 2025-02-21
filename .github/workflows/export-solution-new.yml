@@ -32,12 +32,12 @@ jobs:
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
         #environment-url: ${{ secrets.DATAVERSE_URL }}
-        #app-id: ${{ secrets.APPLICATION_ID }}
-        #tenant-id: ${{ secrets.TENANT_ID }}
-        #client-secret: ${{ secrets.CLIENT_SECRET }}
+        app-id: ${{ secrets.APPLICATION_ID }}
+        tenant-id: ${{ secrets.TENANT_ID }}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
         environment-url: 'https://org38dde50d.crm.dynamics.com'
-        user-name: 'maxim.yemelyanenko@akvelon.com'
-        password-secret: ${{ secrets.MYPASSWORD }}
+        #user-name: 'maxim.yemelyanenko@akvelon.com'
+        #password-secret: ${{ secrets.MYPASSWORD }}
         solution-name: CompanyInfoFinderMaxTest
         solution-output-file: 'CompanyInfoFinderMaxTest.zip'
         working-directory: 'out'
