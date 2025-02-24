@@ -38,7 +38,7 @@ jobs:
         environment-url: 'https://org0f1ce357.crm.dynamics.com'
         #user-name: 'maxim.yemelyanenko@akvelon.com'
         #password-secret: ${{ secrets.MYPASSWORD }}
-        solution-name: Cr2a91a
+        solution-name: SMEApp
         solution-output-file: 'CompanyInfoFinderMaxTest.zip'
         working-directory: 'out'
 
