@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MobileOfflineProfile MobileOfflineProfileId="27da1884-adef-ef11-9341-7c1e525cd804" Name="autogenProfile-c3176892-a05c-4461-b5d9-851861ad4163" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MobileOfflineProfileItems>
+    <MobileOfflineProfileItem MobileOfflineProfileItemId="eb38438a-adef-ef11-9341-7c1e525cd804" Name="crbdb_researchcase">
+      <MobileOfflineProfileItemAssociations />
+      <MobileOfflineProfileItemId>{EB38438A-ADEF-EF11-9341-7C1E525CD804}</MobileOfflineProfileItemId>
+      <RegardingObjectId>{27DA1884-ADEF-EF11-9341-7C1E525CD804}</RegardingObjectId>
+      <Name>crbdb_researchcase</Name>
+      <RecordDistributionCriteria>1</RecordDistributionCriteria>
+      <RecordsOwnedByMe>0</RecordsOwnedByMe>
+      <RecordsOwnedByMyTeam>0</RecordsOwnedByMyTeam>
+      <RecordsOwnedByMyBusinessUnit>0</RecordsOwnedByMyBusinessUnit>
+      <SelectedColumns>[]</SelectedColumns>
+      <ProfileItemEntityFilter></ProfileItemEntityFilter>
+      <EntitySchemaName>crbdb_ResearchCase</EntitySchemaName>
+    </MobileOfflineProfileItem>
+    <MobileOfflineProfileItem MobileOfflineProfileItemId="27baab71-b4f2-ef11-9341-7c1e525cd804" Name="crbdb_precallplanningcase">
+      <MobileOfflineProfileItemAssociations />
+      <MobileOfflineProfileItemId>{27BAAB71-B4F2-EF11-9341-7C1E525CD804}</MobileOfflineProfileItemId>
+      <RegardingObjectId>{27DA1884-ADEF-EF11-9341-7C1E525CD804}</RegardingObjectId>
+      <Name>crbdb_precallplanningcase</Name>
+      <RecordDistributionCriteria>1</RecordDistributionCriteria>
+      <RecordsOwnedByMe>0</RecordsOwnedByMe>
+      <RecordsOwnedByMyTeam>0</RecordsOwnedByMyTeam>
+      <RecordsOwnedByMyBusinessUnit>0</RecordsOwnedByMyBusinessUnit>
+      <SelectedColumns>[]</SelectedColumns>
+      <ProfileItemEntityFilter></ProfileItemEntityFilter>
+      <EntitySchemaName>crbdb_PreCallPlanningCase</EntitySchemaName>
+    </MobileOfflineProfileItem>
+  </MobileOfflineProfileItems>
+  <MobileOfflineProfileId>{27da1884-adef-ef11-9341-7c1e525cd804}</MobileOfflineProfileId>
+  <Name>autogenProfile-c3176892-a05c-4461-b5d9-851861ad4163</Name>
+</MobileOfflineProfile>

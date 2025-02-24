@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24124.182" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.25013.00202">
+  <Entities />
+  <Roles />
+  <Workflows />
+  <FieldSecurityProfiles />
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <MobileOfflineProfiles />
+  <CustomControls />
+  <EntityDataProviders />
+  <CanvasApps />
+  <AIModels>
+    <AIModel>
+      <msdyn_aimodelid>{cab5fed9-5df2-4152-bd48-00a19805cab1}</msdyn_aimodelid>
+      <msdyn_name>ResearchCompanyPrompt</msdyn_name>
+      <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
+      <statecode>1</statecode>
+      <statuscode>1</statuscode>
+      <IsCustomizable>1</IsCustomizable>
+      <msdyn_activerunconfigurationid>{83c000c3-3af0-ef11-9341-002248221519}</msdyn_activerunconfigurationid>
+      <AIConfigurations>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{83c000c3-3af0-ef11-9341-002248221519}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"As a Senior Sales Manager, given the input data "},{"type":"inputVariable","id":"Input"},{"type":"literal","text":" , please create a structured summary about a company using these sections:  Name, Description, Projects, Vacancies, News, PainPoints, SuggestedExpertise. \nUse public websites to retrieve the data. Emphasize the company's activities in software development. Find the company's pain points and specific technical expertise (in software development) they would benefit from. Skip their advertising, product purchases, and announcements not related to new or existing product releases. Include links if possible.\n\nWhen generating a JSON response, take into consideration the following schema:\n\n {  \"name\": \"\",  \"description\": \"\",  \"projects\": [    {      \"name\": \"\",      \"description\": \"\"    }  ],  \"vacancies\": [    {      \"title\": \"\",      \"location\": \"\",      \"description\": \"\"    }  ],  \"news\": [    {      \"title\": \"\",      \"date\": \"\",      \"description\": \"\"    }  ],  \"painPoints\": [    {      \"item\": \"\"    }  ],  \"suggestedExpertise\": [    {      \"item\": \"\"    }  ]}\n\nKeep in mind the number of elements in the arrays in the JSON schema may vary, but ideally it should be from 3 up to 5 elements.\n"}],"definitions":{"inputs":[{"id":"Input","text":"Input","type":"text","quickTestValue":"Akvelon"}],"data":[],"output":{"formats":["json"],"jsonSchema":{"type":"object","properties":{"name":{"type":"string"},"description":{"type":"string"},"projects":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"description":{"type":"string"}},"required":["name","description"]}},"vacancies":{"type":"array","items":{"type":"object","properties":{"title":{"type":"string"},"location":{"type":"string"},"description":{"type":"string"}},"required":["title","location","description"]}},"news":{"type":"array","items":{"type":"object","properties":{"title":{"type":"string"},"date":{"type":"string"},"description":{"type":"string"}},"required":["title","date","description"]}},"painPoints":{"type":"array","items":{"type":"object","properties":{"item":{"type":"string"}},"required":["item"]}},"suggestedExpertise":{"type":"array","items":{"type":"object","properties":{"item":{"type":"string"}},"required":["item"]}}}},"jsonExamples":[{"name":"Akvelon","description":"Akvelon is a software development and consulting company that provides innovative solutions to help businesses achieve their goals. They specialize in software engineering, IT consulting, and project management services.","projects":[{"name":"Project A","description":"Development of a cloud-based platform for data analytics and visualization."},{"name":"Project B","description":"Creation of a mobile application for real-time communication and collaboration."},{"name":"Project C","description":"Implementation of a machine learning algorithm for predictive maintenance in manufacturing."}],"vacancies":[{"title":"Senior Software Engineer","location":"Bellevue, WA","description":"Responsible for designing, developing, and maintaining software applications. Requires experience with C#, .NET, and cloud technologies."},{"title":"Project Manager","location":"Remote","description":"Oversee software development projects, ensuring they are completed on time and within budget. Requires strong leadership and communication skills."},{"title":"Data Scientist","location":"San Francisco, CA","description":"Analyze complex data sets to provide insights and recommendations. Requires experience with Python, R, and machine learning algorithms."}],"news":[{"title":"Akvelon Launches New AI-Powered Tool","date":"2023-09-15","description":"Akvelon has launched a new AI-powered tool designed to enhance business productivity by automating routine tasks."},{"title":"Akvelon Expands Operations to Europe","date":"2023-08-10","description":"Akvelon has announced the expansion of its operations to Europe, opening new offices in Germany and the UK."},{"title":"Akvelon Partners with Tech Giant","date":"2023-07-05","description":"Akvelon has partnered with a leading tech company to develop innovative solutions for the healthcare industry."}],"painPoints":[{"item":"Scalability issues with existing software solutions."},{"item":"Difficulty in integrating new technologies with legacy systems."},{"item":"Challenges in recruiting and retaining top technical talent."}],"suggestedExpertise":[{"item":"Cloud computing and architecture."},{"item":"Machine learning and artificial intelligence."},{"item":"DevOps and continuous integration/continuous deployment (CI/CD)."}]}]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0.1}},"settings":{"recordRetrievalLimit":80,"shouldPreserveRecordLinks":true}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_name>cab5fed9-5df2-4152-bd48-00a19805cab1_2025-02-21T10:01:08.883Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACs1SPU/DMBD9K+jmLEiIIVuAVmIhqK3Yr841HEpsy75Ao6r/ncQJUDUeQK0qMr737n1Y2cHSkpobV6O8kPNsNKTXCTxq28jCGJlpYWkh3cEDe1th+4Q1QQqQQCbieN0I+Z4OF1PdACeQW+m8sYJ0g5WnBFat7fll56FL2CeARcGD5t5ooW3ELJtIDo3FNT++d+jp9ubLfd/55438dVO8xWoIngzYsGb/uiD0/SMeX80DezXSkXPf9VfSOCqGpr3FKMrXb6T6zF831wE/lgU0El2QV47DQ06PDsnIrXWmLxdSRzJzDtv/2Db8B++oUCumkxp3sipSeYAjnSujMF74mzn/Uk0fFx1ZoETkAT3/OIusnw3r0/48FqqnsoDGY31TluSFitnWkhP2YfGF4ofvE6aVfQW0BQAA</msdyn_modelrundataspecification>
+          <msdyn_type>190690001</msdyn_type>
+          <msdyn_aimodelid>{cab5fed9-5df2-4152-bd48-00a19805cab1}</msdyn_aimodelid>
+          <msdyn_trainedmodelaiconfigurationpareid>{57d6febc-3af0-ef11-9341-002248221519}</msdyn_trainedmodelaiconfigurationpareid>
+          <statecode>2</statecode>
+          <statuscode>7</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{57d6febc-3af0-ef11-9341-002248221519}</msdyn_aiconfigurationid>
+          <msdyn_databinding>{"schemaVersion":2}</msdyn_databinding>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_modeldata>89ae9636-ff1c-40f9-9cab-f48684b2db5a</msdyn_modeldata>
+          <msdyn_name>cab5fed9-5df2-4152-bd48-00a19805cab1_2025-02-21T10:00:58.249Z</msdyn_name>
+          <msdyn_modelrundataspecification>
+        {
+          "schemaVersion": 2,
+          "input": {},
+          "output": {}
+        }
+      </msdyn_modelrundataspecification>
+          <msdyn_type>190690000</msdyn_type>
+          <msdyn_aimodelid>{cab5fed9-5df2-4152-bd48-00a19805cab1}</msdyn_aimodelid>
+          <statecode>2</statecode>
+          <statuscode>6</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+      </AIConfigurations>
+    </AIModel>
+    <AIModel>
+      <msdyn_aimodelid>{6ac32067-01f9-40f3-9234-36a3f610c28b}</msdyn_aimodelid>
+      <msdyn_name>ResearchSummaryPromt</msdyn_name>
+      <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
+      <statecode>1</statecode>
+      <statuscode>1</statuscode>
+      <IsCustomizable>1</IsCustomizable>
+      <msdyn_activerunconfigurationid>{4a0a1f99-aaee-ef11-9341-002248221519}</msdyn_activerunconfigurationid>
+      <AIConfigurations>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{4a0a1f99-aaee-ef11-9341-002248221519}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Questions:  \n1. Summarize the company's activities in software development.  \n2. Identify their likely pain points in software development.  \n3. Determine the specific technical expertise they would benefit from.\n\nOutput format:  \nProvide each answer as a separate paragraph, labeled with the respective question number.\n "},{"type":"inputVariable","id":"text"},{"type":"literal","text":" "}],"definitions":{"inputs":[{"id":"text","text":"text","type":"text","quickTestValue":"When diversifying your investment portfolio, it's a good idea to explore alternative investment options in addition to traditional ones. Here are a few alternative investment options you might consider: Commodities: Investing in commodities involves trading in physical goods such as precious metals (gold, silver), energy resources (oil, natural gas), agricultural products (wheat, corn), or industrial metals (copper, aluminum). Commodities can provide a hedge against inflation and offer diversification benefits. Real Estate: Investing in real estate can be done through direct ownership of properties, real estate investment trusts (REITs), or real estate crowdfunding platforms. Real estate can generate rental income and potential capital appreciation over time. Peer-to-Peer Lending: Peer-to-peer lending platforms connect borrowers with lenders, bypassing traditional financial intermediaries like banks. By lending directly to individuals or small businesses, you can earn interest on your invested funds. However, it's important to carefully assess the risk associated with P2P lending and diversify across multiple loans. Venture Capital and Private Equity: These investments involve funding early-stage or established companies that are not publicly traded. Venture capital focuses on startups and high-growth companies, while private equity involves investing in established private companies. Both options carry higher risks but also offer potential high returns. Cryptocurrencies: Cryptocurrencies such as Bitcoin, Ethereum, or others have gained popularity as an alternative investment. However, they are highly volatile and come with significant risks. It's important to conduct thorough research and understand the technology and market dynamics before investing in cryptocurrencies. Art and Collectibles: Investing in art, antiques, or collectibles can provide diversification and the potential for appreciation over time. However, it requires expertise and knowledge in the specific market and can be illiquid. Remember, alternative investments often come with higher risks and may require more specialized knowledge compared to traditional investments. It's essential to thoroughly research and understand the specific risks, potential returns, liquidity, and regulatory considerations associated with any alternative investment before making decisions. Consulting with a financial advisor or investment professional is also advisable to ensure your investment choices align with your financial goals and risk tolerance."}],"data":[],"output":{"formats":["text"]}},"modelParameters":{"modelType":"gpt-35-turbo","gptParameters":{"temperature":0}},"settings":{"recordRetrievalLimit":30,"shouldPreserveRecordLinks":null}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_name>6ac32067-01f9-40f3-9234-36a3f610c28b_2025-02-19T10:16:36.284Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACq2QzQrCMBCEX0X2nIsgHnKrPwUvFtrifbWpBtokJBuwlL67aasoxqPXnZlvd7aHwohLqm2LdBLWSa2ALxkclPGUa017RZI64D3spDMNdkdsBXAABgmRlWdPwo0yiTvFtmnKIDMUyNgAr7FxgkHZmVEuAkFdYWCAVSVnz1ar36wksnyCyfo3d4NOrFcv+hD4maf/NCrnxVGBWirpbrlAN77wO5VO6uIpR/Fw4gMCZ5rqigEAAA==</msdyn_modelrundataspecification>
+          <msdyn_type>190690001</msdyn_type>
+          <msdyn_aimodelid>{6ac32067-01f9-40f3-9234-36a3f610c28b}</msdyn_aimodelid>
+          <msdyn_trainedmodelaiconfigurationpareid>{1da1228f-aaee-ef11-9341-7c1e525cd804}</msdyn_trainedmodelaiconfigurationpareid>
+          <statecode>2</statecode>
+          <statuscode>7</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{1da1228f-aaee-ef11-9341-7c1e525cd804}</msdyn_aiconfigurationid>
+          <msdyn_databinding>{"schemaVersion":2}</msdyn_databinding>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_modeldata>23967c67-97e0-4e49-b240-0fbeb352c47e</msdyn_modeldata>
+          <msdyn_name>6ac32067-01f9-40f3-9234-36a3f610c28b_2025-02-19T10:16:21.212Z</msdyn_name>
+          <msdyn_modelrundataspecification>
+        {
+          "schemaVersion": 2,
+          "input": {},
+          "output": {}
+        }
+      </msdyn_modelrundataspecification>
+          <msdyn_type>190690000</msdyn_type>
+          <msdyn_aimodelid>{6ac32067-01f9-40f3-9234-36a3f610c28b}</msdyn_aimodelid>
+          <statecode>2</statecode>
+          <statuscode>6</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+      </AIConfigurations>
+    </AIModel>
+  </AIModels>
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="crbdb_akvelonCaseStudiesAgent.shared_commondataserviceforapps.shared-commondataser-5a8d70a3-f756-4df4-b179-273b41809a1f">
+      <connectionreferencedisplayname>crbdb_akvelonCaseStudiesAgent.shared_commondataserviceforapps.shared-commondataser-5a8d70a3-f756-4df4-b179-273b41809a1f</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>0</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

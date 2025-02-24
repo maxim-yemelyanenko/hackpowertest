@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{c6866d6c-1520-46e0-8598-b2f73961f286}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crbdb_companydescription" select="1" icon="1" preview="1">
+        <row name="result" id="crbdb_precallplanningcaseid">
+          <cell name="crbdb_companydescription" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crbdb_precallplanningcase">
+          <attribute name="crbdb_precallplanningcaseid" />
+          <attribute name="crbdb_companydescription" />
+          <attribute name="createdon" />
+          <order attribute="crbdb_companydescription" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="crbdb_companydescription" operator="like" value="{0}" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Quick Find Active PreCallPlanningCases" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

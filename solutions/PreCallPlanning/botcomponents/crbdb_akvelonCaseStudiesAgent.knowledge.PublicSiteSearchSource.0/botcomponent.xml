@@ -1,0 +1,11 @@
+<botcomponent schemaname="crbdb_akvelonCaseStudiesAgent.knowledge.PublicSiteSearchSource.0">
+  <componenttype>16</componenttype>
+  <description>Akvelon official website</description>
+  <iscustomizable>0</iscustomizable>
+  <name>https://akvelon.com/</name>
+  <parentbotid>
+    <schemaname>crbdb_akvelonCaseStudiesAgent</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

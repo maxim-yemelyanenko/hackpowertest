@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{cdad7727-0d03-41f2-acf8-1c000a0268e4}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{81ebed89-fdb4-4129-bb30-5dd585b5c0d4}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{e1b71cb5-878e-400d-886e-2cd5306de37f}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e397ad55-93d6-4a2e-b552-5a9052b7d45d}">
+                        <labels>
+                          <label description="CompanyDescription" languagecode="1033" />
+                        </labels>
+                        <control id="crbdb_companydescription" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="crbdb_companydescription" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{91fbed3f-11c6-489b-a7ee-dd1915ca7794}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e1dfb405-d50e-434b-8391-4eed90ee795a}">
+                        <labels>
+                          <label description="CompanyProductsInfo" languagecode="1033" />
+                        </labels>
+                        <control id="crbdb_companyproductsinfo" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="crbdb_companyproductsinfo" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1142c6e9-46b2-47e6-ba67-3954fbd5405c}">
+                        <labels>
+                          <label description="JobOpenings" languagecode="1033" />
+                        </labels>
+                        <control id="crbdb_jobopenings" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="crbdb_jobopenings" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9f8ba28a-031e-407b-8326-7a5f6254e1b1}">
+                        <labels>
+                          <label description="CompanyNews" languagecode="1033" />
+                        </labels>
+                        <control id="crbdb_companynews" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="crbdb_companynews" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a8bc88b7-101e-4165-aec9-43b4c84cfef2}">
+                        <labels>
+                          <label description="Summary" languagecode="1033" />
+                        </labels>
+                        <control id="crbdb_summary" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="crbdb_summary" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a519ac99-fba5-4b64-a755-1303eba84bce}">
+                        <labels>
+                          <label description="PainPoints" languagecode="1033" />
+                        </labels>
+                        <control id="crbdb_painpoints" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="crbdb_painpoints" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8c7582f0-8bf3-41ca-8e93-2dab55f8c5ac}">
+                        <labels>
+                          <label description="TechnicalExpertiseNeeds" languagecode="1033" />
+                        </labels>
+                        <control id="crbdb_technicalexpertiseneeds" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="crbdb_technicalexpertiseneeds" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c09dcda2-36bf-4e7d-a2c3-3f462323a37c}">
+                        <labels>
+                          <label description="RelevantAkvelonExpertise" languagecode="1033" />
+                        </labels>
+                        <control id="crbdb_relevantakvelonexpertise" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="crbdb_relevantakvelonexpertise" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{df7f398a-e65a-4803-b34c-404148015dbf}">
+                        <labels>
+                          <label description="OutreachMessage" languagecode="1033" />
+                        </labels>
+                        <control id="crbdb_outreachmessage" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="crbdb_outreachmessage" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ceaa3f1f-7afe-45b0-87bd-e4327ec74a9a}">
+                        <labels>
+                          <label description="companyprecallrelation" languagecode="1033" />
+                        </labels>
+                        <control id="crbdb_companyprecallrelation" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="crbdb_companyprecallrelation" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

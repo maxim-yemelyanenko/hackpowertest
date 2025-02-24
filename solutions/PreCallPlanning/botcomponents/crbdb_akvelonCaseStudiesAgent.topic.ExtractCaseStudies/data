@@ -1,0 +1,502 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnActivity
+  id: main
+  type: Message
+  actions:
+    - kind: ParseValue
+      id: 9TSkrR
+      variable: Topic.InputMessage
+      valueType:
+        kind: Record
+        properties:
+          rowId: String
+          summaryText: String
+
+      value: =System.Activity.Text
+
+    - kind: SearchAndSummarizeContent
+      id: gDUK2S
+      variable: Topic.Var_CaseStudies_OutputMessage_Text
+      userInput: =Topic.InputMessage.summaryText
+      additionalInstructions: |-
+        As an input, you will receive a summarized information about company including it's pain points, and specific technical expertice they would benefit from.
+        
+        Your goal is to, based on the input information, find relevant Akvelon case studies which shows that Akvelon company have experience with topics the customer need.
+        
+        Rules:
+        By the input, find relevant case studies from the Akvelon website;
+        Ensure the information is accurate and relevant to the user's request;
+        Emphasize parts of the case studies that can be useful for company from the input;
+        Provide concise and clear summaries;
+        Avoid including any unrelated information in the summaries;
+        Respond in a formal and technical tone;
+        Include url links to resources where relevant information is found;
+        Return **ONLY** list of case studies with it's info;
+        
+        **Example input:**
+        
+        Summary
+        Hinge Health develops technology-driven solutions to treat and prevent musculoskeletal (MSK) pain through digital and personalized care programs. Their products include virtual physical therapy, wearable sensors for real-time feedback, telehealth services, behavioral health support, and coaching. They leverage AI and advanced technology to provide care directly through users’ phones. The company also builds data pipelines, distributed microservices, healthcare-compliant data lakes, and integrates with APIs to support their web and mobile applications.
+        Pain points
+        Hinge Health likely faces challenges in scaling their data infrastructure to handle growing demand and managing complex distributed systems. Ensuring data security and HIPAA compliance for healthcare data while maintaining API reliability and performance is another critical pain point. Additionally, addressing user complaints about billing practices and communication, coupled with optimizing their backend and frontend systems for seamless telehealth and real-time sensor feedback, remain key technical hurdles.
+        The specific technical expertise they would benefit from
+        Hinge Health would benefit from expertise in building scalable data pipelines using tools like Spark, Kafka, and Airflow, as well as experience in distributed systems and microservices architecture. Proficiency in secure API design, healthcare data compliance (e.g., HIPAA), and managing healthcare data lakes is essential. Expertise in frontend technologies like React/TypeScript and mobile development, alongside AI/ML for healthcare applications, would further enhance their ability to deliver innovative and efficient solutions.
+        
+        
+        **Example output:**
+        
+        Case study 1
+        Summary about case study 1
+        
+        Case study 2
+        Summary about case study 2
+        
+        etc.
+        ...
+      fileSearchDataSource:
+        searchFilesMode:
+          kind: DoNotSearchFiles
+
+      knowledgeSources:
+        kind: SearchSpecificKnowledgeSources
+        knowledgeSources:
+          - crbdb_akvelonCaseStudiesAgent.knowledge.PublicSiteSearchSource.0
+
+    - kind: SendActivity
+      id: sendActivity_Dg0lIN
+      activity: |-
+        Input: {Topic.InputMessage}
+        
+        Result: {Topic.Var_CaseStudies_OutputMessage_Text}
+
+    - kind: InvokeConnectorAction
+      id: invokeConnectorAction_1XOorP
+      displayName: Record case studies to DB
+      input:
+        binding:
+          entityName: crbdb_precallplanningcases
+          item: "={crbdb_relevantakvelonexpertise: Topic.Var_CaseStudies_OutputMessage_Text}"
+          organization: https://org0f1ce357.crm.dynamics.com
+          recordId: =Topic.InputMessage.rowId
+
+      output:
+        kind: SingleVariableOutputBinding
+        variable: Topic.UpdateOnlyRecordWithOrganization
+
+      connectionReference: crbdb_akvelonCaseStudiesAgent.shared_commondataserviceforapps.shared-commondataser-5a8d70a3-f756-4df4-b179-273b41809a1f
+      connectionProperties:
+        mode: Maker
+
+      dynamicInputSchema:
+        properties:
+          entityName:
+            displayName: Table name
+            description: Choose a table
+            isRequired: true
+            order: 1
+            dynamicValuesConfig:
+              capability: List
+
+            type: String
+
+          item:
+            displayName: Row Item
+            description: Row to update
+            isRequired: true
+            order: 3
+            type:
+              kind: Record
+              properties:
+                crbdb_companydescription:
+                  displayName: CompanyDescription
+                  visibility: Advanced
+                  order: 0
+                  type: String
+
+                crbdb_companynews:
+                  displayName: CompanyNews
+                  visibility: Advanced
+                  order: 1
+                  type: String
+
+                crbdb_companyprecallrelation@odata.bind:
+                  displayName: companyprecallrelation (Companies)
+                  order: 2
+                  type: String
+
+                crbdb_companyproductsinfo:
+                  displayName: CompanyProductsInfo
+                  visibility: Advanced
+                  order: 3
+                  type: String
+
+                crbdb_jobopenings:
+                  displayName: JobOpenings
+                  visibility: Advanced
+                  order: 4
+                  type: String
+
+                crbdb_outreachmessage:
+                  displayName: OutreachMessage
+                  visibility: Advanced
+                  order: 5
+                  type: String
+
+                crbdb_painpoints:
+                  displayName: PainPoints
+                  visibility: Advanced
+                  order: 7
+                  type: String
+
+                crbdb_relevantakvelonexpertise:
+                  displayName: RelevantAkvelonExpertise
+                  visibility: Advanced
+                  order: 8
+                  type: String
+
+                crbdb_summary:
+                  displayName: Summary
+                  visibility: Advanced
+                  order: 11
+                  type: String
+
+                crbdb_technicalexpertiseneeds:
+                  displayName: TechnicalExpertiseNeeds
+                  visibility: Advanced
+                  order: 12
+                  type: String
+
+                ownerid@odata.bind:
+                  displayName: Owner (Owners)
+                  description: Owner Id
+                  visibility: Advanced
+                  order: 6
+                  type: String
+
+                statecode:
+                  displayName: Status
+                  description: Status of the PreCallPlanningCase
+                  visibility: Advanced
+                  order: 9
+                  dynamicValuesConfig:
+                    capability: List
+
+                  type: Number
+
+                statuscode:
+                  displayName: Status Reason
+                  description: Reason for the status of the PreCallPlanningCase
+                  visibility: Advanced
+                  order: 10
+                  dynamicValuesConfig:
+                    capability: List
+
+                  type: Number
+
+                timezoneruleversionnumber:
+                  displayName: Time Zone Rule Version Number
+                  description: For internal use only.
+                  visibility: Advanced
+                  order: 13
+                  type: Number
+
+                utcconversiontimezonecode:
+                  displayName: UTC Conversion Time Zone Code
+                  description: Time zone code that was in use when the record was created.
+                  visibility: Advanced
+                  order: 14
+                  type: Number
+
+          organization:
+            displayName: Environment
+            description: Choose an environment
+            isRequired: true
+            order: 0
+            dynamicValuesConfig:
+              capability: List
+
+            type: String
+
+          recordId:
+            displayName: Row ID
+            description: Enter the row's globally unique identifier (GUID)
+            isRequired: true
+            order: 2
+            type: String
+
+      dynamicOutputSchema:
+        kind: Record
+        properties:
+          _crbdb_companyprecallrelation_value:
+            displayName: companyprecallrelation (Value)
+            order: 3
+            type: String
+
+          _crbdb_companyprecallrelation_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+            displayName: companyprecallrelation (Type)
+            order: 2
+            type: String
+
+          _createdby_value:
+            displayName: Created By (Value)
+            description: Unique identifier of the user who created the record.
+            visibility: Advanced
+            order: 8
+            type: String
+
+          _createdby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+            displayName: Created By (Type)
+            description: Unique identifier of the user who created the record.
+            visibility: Advanced
+            order: 7
+            type: String
+
+          _createdonbehalfby_value:
+            displayName: Created By (Delegate) (Value)
+            description: Unique identifier of the delegate user who created the record.
+            visibility: Advanced
+            order: 6
+            type: String
+
+          _createdonbehalfby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+            displayName: Created By (Delegate) (Type)
+            description: Unique identifier of the delegate user who created the record.
+            visibility: Advanced
+            order: 5
+            type: String
+
+          _modifiedby_value:
+            displayName: Modified By (Value)
+            description: Unique identifier of the user who modified the record.
+            visibility: Advanced
+            order: 15
+            type: String
+
+          _modifiedby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+            displayName: Modified By (Type)
+            description: Unique identifier of the user who modified the record.
+            visibility: Advanced
+            order: 14
+            type: String
+
+          _modifiedonbehalfby_value:
+            displayName: Modified By (Delegate) (Value)
+            description: Unique identifier of the delegate user who modified the record.
+            visibility: Advanced
+            order: 13
+            type: String
+
+          _modifiedonbehalfby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+            displayName: Modified By (Delegate) (Type)
+            description: Unique identifier of the delegate user who modified the record.
+            visibility: Advanced
+            order: 12
+            type: String
+
+          _ownerid_value:
+            displayName: Owner (Value)
+            description: Owner Id
+            visibility: Advanced
+            order: 20
+            type: String
+
+          _ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+            displayName: Owner (Type)
+            description: Owner Id
+            visibility: Advanced
+            order: 19
+            type: String
+
+          _owningbusinessunit_value:
+            displayName: Owning Business Unit (Value)
+            description: Unique identifier for the business unit that owns the record
+            order: 22
+            type: String
+
+          _owningbusinessunit_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+            displayName: Owning Business Unit (Type)
+            description: Unique identifier for the business unit that owns the record
+            order: 21
+            type: String
+
+          _owningteam_value:
+            displayName: Owning Team (Value)
+            description: Unique identifier for the team that owns the record.
+            visibility: Advanced
+            order: 24
+            type: String
+
+          _owningteam_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+            displayName: Owning Team (Type)
+            description: Unique identifier for the team that owns the record.
+            visibility: Advanced
+            order: 23
+            type: String
+
+          _owninguser_value:
+            displayName: Owning User (Value)
+            description: Unique identifier for the user that owns the record.
+            visibility: Advanced
+            order: 26
+            type: String
+
+          _owninguser_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+            displayName: Owning User (Type)
+            description: Unique identifier for the user that owns the record.
+            visibility: Advanced
+            order: 25
+            type: String
+
+          @odata.id:
+            displayName: OData Id
+            description: OData row id
+            order: 17
+            type: String
+
+          crbdb_companydescription:
+            displayName: CompanyDescription
+            visibility: Advanced
+            order: 0
+            type: String
+
+          crbdb_companynews:
+            displayName: CompanyNews
+            visibility: Advanced
+            order: 1
+            type: String
+
+          crbdb_companyproductsinfo:
+            displayName: CompanyProductsInfo
+            visibility: Advanced
+            order: 4
+            type: String
+
+          crbdb_jobopenings:
+            displayName: JobOpenings
+            visibility: Advanced
+            order: 11
+            type: String
+
+          crbdb_outreachmessage:
+            displayName: OutreachMessage
+            visibility: Advanced
+            order: 18
+            type: String
+
+          crbdb_painpoints:
+            displayName: PainPoints
+            visibility: Advanced
+            order: 27
+            type: String
+
+          crbdb_precallplanningcaseid:
+            displayName: PreCallPlanningCase
+            description: Unique identifier for entity instances
+            visibility: Advanced
+            order: 28
+            type: String
+
+          crbdb_relevantakvelonexpertise:
+            displayName: RelevantAkvelonExpertise
+            visibility: Advanced
+            order: 30
+            type: String
+
+          crbdb_summary:
+            displayName: Summary
+            visibility: Advanced
+            order: 33
+            type: String
+
+          crbdb_technicalexpertiseneeds:
+            displayName: TechnicalExpertiseNeeds
+            visibility: Advanced
+            order: 34
+            type: String
+
+          createdon:
+            displayName: Created On
+            description: Date and time when the record was created.
+            visibility: Advanced
+            order: 9
+            type: DateTime
+
+          importsequencenumber:
+            displayName: Import Sequence Number
+            description: Sequence number of the import that created this record.
+            visibility: Advanced
+            order: 10
+            type: Number
+
+          modifiedon:
+            displayName: Modified On
+            description: Date and time when the record was modified.
+            visibility: Advanced
+            order: 16
+            type: DateTime
+
+          overriddencreatedon:
+            displayName: Record Created On
+            description: Date and time that the record was migrated.
+            visibility: Advanced
+            order: 29
+            type: DateTime
+
+          statecode:
+            displayName: Status
+            description: Status of the PreCallPlanningCase
+            visibility: Advanced
+            order: 31
+            dynamicValuesConfig:
+              capability: List
+
+            type: Number
+
+          statuscode:
+            displayName: Status Reason
+            description: Reason for the status of the PreCallPlanningCase
+            visibility: Advanced
+            order: 32
+            dynamicValuesConfig:
+              capability: List
+
+            type: Number
+
+          timezoneruleversionnumber:
+            displayName: Time Zone Rule Version Number
+            description: For internal use only.
+            visibility: Advanced
+            order: 35
+            type: Number
+
+          utcconversiontimezonecode:
+            displayName: UTC Conversion Time Zone Code
+            description: Time zone code that was in use when the record was created.
+            visibility: Advanced
+            order: 36
+            type: Number
+
+          versionnumber:
+            displayName: Version Number
+            description: Version Number
+            visibility: Advanced
+            order: 37
+            type: Number
+
+      operationId: UpdateOnlyRecordWithOrganization
+
+    - kind: SendActivity
+      id: sendActivity_rpk0fE
+      activity: |-
+        Input: {Topic.InputMessage}
+        
+        Result: {Topic.Var_CaseStudies_OutputMessage_Text}
+        
+        Record: {Topic.UpdateOnlyRecordWithOrganization}
+
+    - kind: EndDialog
+      id: BnDIFL
+
+inputType: {}
+outputType: {}

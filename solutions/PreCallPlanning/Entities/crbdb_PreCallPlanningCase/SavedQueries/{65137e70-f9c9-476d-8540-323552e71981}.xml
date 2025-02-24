@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{65137e70-f9c9-476d-8540-323552e71981}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crbdb_companydescription" select="1" icon="1" preview="1">
+        <row name="result" id="crbdb_precallplanningcaseid">
+          <cell name="crbdb_companydescription" width="300" />
+          <cell name="createdon" width="125" />
+          <cell name="crbdb_companyproductsinfo" width="150" />
+          <cell name="crbdb_jobopenings" width="150" />
+          <cell name="crbdb_companynews" width="150" />
+          <cell name="crbdb_summary" width="150" />
+          <cell name="crbdb_painpoints" width="150" />
+          <cell name="crbdb_technicalexpertiseneeds" width="150" />
+          <cell name="crbdb_relevantakvelonexpertise" width="150" />
+          <cell name="crbdb_outreachmessage" width="150" />
+          <cell name="crbdb_companyprecallrelation" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crbdb_precallplanningcase">
+          <attribute name="crbdb_precallplanningcaseid" />
+          <attribute name="crbdb_companydescription" />
+          <attribute name="createdon" />
+          <order attribute="crbdb_companydescription" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="crbdb_companyproductsinfo" />
+          <attribute name="crbdb_jobopenings" />
+          <attribute name="crbdb_companynews" />
+          <attribute name="crbdb_summary" />
+          <attribute name="crbdb_painpoints" />
+          <attribute name="crbdb_technicalexpertiseneeds" />
+          <attribute name="crbdb_relevantakvelonexpertise" />
+          <attribute name="crbdb_outreachmessage" />
+          <attribute name="crbdb_companyprecallrelation" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active PreCallPlanningCases" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
