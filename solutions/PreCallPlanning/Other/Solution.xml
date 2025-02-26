@@ -6,7 +6,7 @@
       <LocalizedName description="PreCallPlanning" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.2</Version>
+    <Version>1.0.0.3</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>DefaultPublisherorg0f1ce357</UniqueName>
@@ -84,6 +84,7 @@
       <RootComponent type="1" schemaName="crbdb_researchcase" behavior="0" />
       <RootComponent type="161" id="{27da1884-adef-ef11-9341-7c1e525cd804}" behavior="0" />
       <RootComponent type="29" id="{5e754699-66f3-ef11-9342-6045bdecec89}" behavior="0" />
+      <RootComponent type="29" id="{61b0e9f5-32f4-ef11-9342-6045bdecec89}" behavior="0" />
       <RootComponent type="300" schemaName="new_precallplanning_fe167" behavior="0" />
       <RootComponent type="401" id="{1629f2cd-4651-4792-bbff-06de7685e4af}" behavior="0" />
       <RootComponent type="401" id="{6ac32067-01f9-40f3-9234-36a3f610c28b}" behavior="0" />
