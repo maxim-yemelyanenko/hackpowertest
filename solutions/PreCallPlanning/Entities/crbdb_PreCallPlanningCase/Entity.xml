@@ -161,7 +161,7 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>2000</MaxLength>
+          <MaxLength>4000</MaxLength>
           <displaynames>
             <displayname description="CompanyProductsInfo" languagecode="1033" />
           </displaynames>
@@ -239,7 +239,7 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>2000</MaxLength>
+          <MaxLength>4000</MaxLength>
           <displaynames>
             <displayname description="JobOpenings" languagecode="1033" />
           </displaynames>
@@ -317,7 +317,7 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>2000</MaxLength>
+          <MaxLength>4000</MaxLength>
           <displaynames>
             <displayname description="OutreachMessage" languagecode="1033" />
           </displaynames>
