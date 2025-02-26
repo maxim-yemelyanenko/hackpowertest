@@ -10,8 +10,8 @@
   "contentVersion": 2,
   "lastFinishedPublishOperation": {
     "$kind": "PublishResultDetails",
-    "operationStart": "2025-02-24T16:21:29.4970277Z",
-    "operationEnd": "2025-02-24T16:21:48.5245722Z",
+    "operationStart": "2025-02-25T17:43:41.0261128Z",
+    "operationEnd": "2025-02-25T17:44:14.138411Z",
     "status": "Succeeded"
   },
   "lastPublishedDetails": {
@@ -33,7 +33,7 @@
     "provisioningStatus": "Provisioned",
     "state": "Synchronized"
   },
-  "lastSynchronizedOnUtc": "2025-02-24T16:31:22.4677428Z"
+  "lastSynchronizedOnUtc": "2025-02-25T17:44:53.4634707Z"
 }</synchronizationstatus>
   <template>default-2.1.0</template>
   <timezoneruleversionnumber>4</timezoneruleversionnumber>

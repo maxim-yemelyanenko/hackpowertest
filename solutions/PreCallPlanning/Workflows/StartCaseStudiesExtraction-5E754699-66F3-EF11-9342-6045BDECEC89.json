@@ -1,0 +1,122 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_microsoftcopilotstudio": {
+        "api": {
+          "name": "shared_microsoftcopilotstudio"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedmicrosoftcopilotstudio_7d1d9"
+        },
+        "runtimeSource": "invoker"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "undefined",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "PowerAppV2",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "description": "PCP Case DB Row ID",
+                  "title": "RowId",
+                  "type": "string",
+                  "x-ms-content-hint": "TEXT",
+                  "x-ms-dynamically-added": true
+                },
+                "text_1": {
+                  "description": "PCP Case Summary text",
+                  "title": "SummaryText",
+                  "type": "string",
+                  "x-ms-content-hint": "TEXT",
+                  "x-ms-dynamically-added": true
+                }
+              },
+              "required": [
+                "text",
+                "text_1"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "6cbeec9e-8575-4408-af37-ed4b2cefa116"
+          }
+        }
+      },
+      "actions": {
+        "Create_request_message": {
+          "type": "Compose",
+          "inputs": "@json(concat('{\"rowId\": \"', triggerBody()?['text'], '\", \"summaryText\": \"', body('ParseSummaryMessage')?['summary'], '\\n', body('ParseSummaryMessage')?['painPoints'], '\\n', body('ParseSummaryMessage')?['technicalExpertise'], '\\n', '\"}'))",
+          "runAfter": {
+            "ParseSummaryMessage": [
+              "SUCCEEDED"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4c50d070-56f2-4a67-b316-638e1f635e46"
+          }
+        },
+        "Execute_Copilot": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "Copilot": "crbdb_akvelonCaseStudiesAgent",
+              "body/message": "@outputs('Create_request_message')"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_microsoftcopilotstudio",
+              "operationId": "ExecuteCopilot",
+              "connectionName": "shared_microsoftcopilotstudio"
+            }
+          },
+          "runAfter": {
+            "Create_request_message": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f9887af5-8432-41d2-9d04-8185d8daf95f"
+          }
+        },
+        "ParseSummaryMessage": {
+          "type": "ParseJson",
+          "inputs": {
+            "content": "@triggerBody()?['text_1']",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "summary": {
+                  "type": "string"
+                },
+                "painPoints": {
+                  "type": "string"
+                },
+                "technicalExpertise": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "runAfter": {}
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

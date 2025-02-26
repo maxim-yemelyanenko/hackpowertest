@@ -20,40 +20,34 @@ beginDialog:
       variable: Topic.Var_CaseStudies_OutputMessage_Text
       userInput: =Topic.InputMessage.summaryText
       additionalInstructions: |-
-        As an input, you will receive a summarized information about company including it's pain points, and specific technical expertice they would benefit from.
+        Input : A structured summary of a company, including its pain points and technical expertise needs.
         
-        Your goal is to, based on the input information, find relevant Akvelon case studies which shows that Akvelon company have experience with topics the customer need.
+        Objective : Identify and summarize Akvelon case studies from the provided web_search results 1-10 that address the company’s challenges.
         
-        Rules:
-        By the input, find relevant case studies from the Akvelon website;
-        Ensure the information is accurate and relevant to the user's request;
-        Emphasize parts of the case studies that can be useful for company from the input;
-        Provide concise and clear summaries;
-        Avoid including any unrelated information in the summaries;
-        Respond in a formal and technical tone;
-        Include url links to resources where relevant information is found;
-        Return **ONLY** list of case studies with it's info;
+        Instructions :
+        - Cross-reference input with web_search data : Map the company’s pain points and expertise needs to Akvelon’s documented solutions in 1, 3, 6, 7, 10.
+        - Prioritize relevance : Focus on case studies involving:
+            - Data security, API integration, or compliance (e.g., 1, 6).
+            - Scalable data pipelines, AI/ML, or analytics (e.g., 3, 10).
+            - Distributed systems or microservices (e.g., 6, 8).
+        - Structure output :
+            - Case Study Title (with URL from web_search).
+            - Summary : Highlight technical alignment with the input (e.g., tools like Spark/Kafka 3, HIPAA-compliant architectures 1).
+            - Relevance : Explicitly tie the case study to the company’s pain points (e.g., “Akvelon’s experience with healthcare data lakes 10 addresses Hinge Health’s HIPAA compliance needs”).
+        - Tone : Formal, concise, and technical. Avoid speculative claims; only use verifiable details from web_search.
+        - Exclude unrelated content : Ignore case studies outside the scope of the input (e.g., non-technical or marketing-focused entries).
         
-        **Example input:**
+        Example Output Format :
         
-        Summary
-        Hinge Health develops technology-driven solutions to treat and prevent musculoskeletal (MSK) pain through digital and personalized care programs. Their products include virtual physical therapy, wearable sensors for real-time feedback, telehealth services, behavioral health support, and coaching. They leverage AI and advanced technology to provide care directly through users’ phones. The company also builds data pipelines, distributed microservices, healthcare-compliant data lakes, and integrates with APIs to support their web and mobile applications.
-        Pain points
-        Hinge Health likely faces challenges in scaling their data infrastructure to handle growing demand and managing complex distributed systems. Ensuring data security and HIPAA compliance for healthcare data while maintaining API reliability and performance is another critical pain point. Additionally, addressing user complaints about billing practices and communication, coupled with optimizing their backend and frontend systems for seamless telehealth and real-time sensor feedback, remain key technical hurdles.
-        The specific technical expertise they would benefit from
-        Hinge Health would benefit from expertise in building scalable data pipelines using tools like Spark, Kafka, and Airflow, as well as experience in distributed systems and microservices architecture. Proficiency in secure API design, healthcare data compliance (e.g., HIPAA), and managing healthcare data lakes is essential. Expertise in frontend technologies like React/TypeScript and mobile development, alongside AI/ML for healthcare applications, would further enhance their ability to deliver innovative and efficient solutions.
+        Case Study 1
+        Summary : Akvelon implemented a payment system with enhanced data security and fund control, addressing compliance and API reliability.
+        Relevance : Aligns with Hinge Health’s need for HIPAA-compliant data infrastructure and secure API design.
+        URL : <Link to Akvelon Payment System Case Study>
         
-        
-        **Example output:**
-        
-        Case study 1
-        Summary about case study 1
-        
-        Case study 2
-        Summary about case study 2
-        
-        etc.
-        ...
+        Case Study 2
+        Summary : Akvelon’s Data and Analytics Accelerators leverage AI/ML and tools like Spark for scalable data pipelines.
+        Relevance : Matches Hinge Health’s requirement for distributed systems and healthcare data lakes.
+        URL : <Link>
       fileSearchDataSource:
         searchFilesMode:
           kind: DoNotSearchFiles
@@ -65,10 +59,14 @@ beginDialog:
 
     - kind: SendActivity
       id: sendActivity_Dg0lIN
-      activity: |-
-        Input: {Topic.InputMessage}
+      activity: |
+        **Input:**
         
-        Result: {Topic.Var_CaseStudies_OutputMessage_Text}
+        {Topic.InputMessage}
+        
+        **Result:**
+        
+         {Topic.Var_CaseStudies_OutputMessage_Text}
 
     - kind: InvokeConnectorAction
       id: invokeConnectorAction_1XOorP
@@ -489,11 +487,9 @@ beginDialog:
     - kind: SendActivity
       id: sendActivity_rpk0fE
       activity: |-
-        Input: {Topic.InputMessage}
+        **Record:**
         
-        Result: {Topic.Var_CaseStudies_OutputMessage_Text}
-        
-        Record: {Topic.UpdateOnlyRecordWithOrganization}
+        {Topic.UpdateOnlyRecordWithOrganization}
 
     - kind: EndDialog
       id: BnDIFL
