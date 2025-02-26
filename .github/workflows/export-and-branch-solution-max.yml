@@ -39,11 +39,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      timeout-minutes: 10
       with:
         lfs: true
 
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
+      timeout-minutes: 10
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         app-id: ${{env.CLIENT_ID}}
