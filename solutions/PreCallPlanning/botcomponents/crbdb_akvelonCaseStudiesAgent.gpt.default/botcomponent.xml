@@ -1,0 +1,11 @@
+<botcomponent schemaname="crbdb_akvelonCaseStudiesAgent.gpt.default">
+  <componenttype>15</componenttype>
+  <description>An agent that retrieves and summarizes information about Akvelon case studies.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Akvelon Case Studies Agent</name>
+  <parentbotid>
+    <schemaname>crbdb_akvelonCaseStudiesAgent</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

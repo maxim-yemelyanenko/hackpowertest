@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_crbdb_precallplanningcase" />
+  <EntityRelationship Name="business_unit_crbdb_researchcase" />
+  <EntityRelationship Name="crbdb_precallplanningcase_companyprecallrelation_crbdb_researchcase" />
+  <EntityRelationship Name="lk_crbdb_precallplanningcase_createdby" />
+  <EntityRelationship Name="lk_crbdb_precallplanningcase_modifiedby" />
+  <EntityRelationship Name="lk_crbdb_researchcase_createdby" />
+  <EntityRelationship Name="lk_crbdb_researchcase_modifiedby" />
+  <EntityRelationship Name="owner_crbdb_precallplanningcase" />
+  <EntityRelationship Name="owner_crbdb_researchcase" />
+  <EntityRelationship Name="team_crbdb_precallplanningcase" />
+  <EntityRelationship Name="team_crbdb_researchcase" />
+  <EntityRelationship Name="user_crbdb_precallplanningcase" />
+  <EntityRelationship Name="user_crbdb_researchcase" />
+</EntityRelationships>

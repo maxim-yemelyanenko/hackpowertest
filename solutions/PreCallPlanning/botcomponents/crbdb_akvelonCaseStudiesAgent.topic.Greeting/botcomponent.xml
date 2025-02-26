@@ -1,0 +1,11 @@
+<botcomponent schemaname="crbdb_akvelonCaseStudiesAgent.topic.Greeting">
+  <componenttype>9</componenttype>
+  <description>This topic is triggered when the user greets the copilot.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Greeting</name>
+  <parentbotid>
+    <schemaname>crbdb_akvelonCaseStudiesAgent</schemaname>
+  </parentbotid>
+  <statecode>1</statecode>
+  <statuscode>2</statuscode>
+</botcomponent>

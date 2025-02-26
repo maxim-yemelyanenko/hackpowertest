@@ -1,0 +1,5 @@
+<botcomponent_connectionreferenceset>
+  <botcomponent_connectionreference botcomponentid.schemaname="crbdb_akvelonCaseStudiesAgent.topic.ExtractCaseStudies" connectionreferenceid.connectionreferencelogicalname="crbdb_akvelonCaseStudiesAgent.shared_commondataserviceforapps.shared-commondataser-5a8d70a3-f756-4df4-b179-273b41809a1f">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_connectionreference>
+</botcomponent_connectionreferenceset>
