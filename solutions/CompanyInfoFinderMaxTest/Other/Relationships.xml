@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_cr916_companyinformation1" />
+  <EntityRelationship Name="business_unit_cr916_jobopening" />
+  <EntityRelationship Name="business_unit_cr916_news" />
+  <EntityRelationship Name="business_unit_cr916_project" />
+  <EntityRelationship Name="cr916_jobopening_cr916_companyid_cr916_companyinformation1" />
+  <EntityRelationship Name="cr916_news_cr916_companyid_cr916_companyinformation1" />
+  <EntityRelationship Name="cr916_project_cr916_companyid_cr916_companyinformation1" />
+  <EntityRelationship Name="lk_cr916_companyinformation1_createdby" />
+  <EntityRelationship Name="lk_cr916_companyinformation1_modifiedby" />
+  <EntityRelationship Name="lk_cr916_jobopening_createdby" />
+  <EntityRelationship Name="lk_cr916_jobopening_modifiedby" />
+  <EntityRelationship Name="lk_cr916_news_createdby" />
+  <EntityRelationship Name="lk_cr916_news_modifiedby" />
+  <EntityRelationship Name="lk_cr916_project_createdby" />
+  <EntityRelationship Name="lk_cr916_project_modifiedby" />
+  <EntityRelationship Name="owner_cr916_companyinformation1" />
+  <EntityRelationship Name="owner_cr916_jobopening" />
+  <EntityRelationship Name="owner_cr916_news" />
+  <EntityRelationship Name="owner_cr916_project" />
+  <EntityRelationship Name="team_cr916_companyinformation1" />
+  <EntityRelationship Name="team_cr916_jobopening" />
+  <EntityRelationship Name="team_cr916_news" />
+  <EntityRelationship Name="team_cr916_project" />
+  <EntityRelationship Name="TransactionCurrency_cr916_JobOpening" />
+  <EntityRelationship Name="user_cr916_companyinformation1" />
+  <EntityRelationship Name="user_cr916_jobopening" />
+  <EntityRelationship Name="user_cr916_news" />
+  <EntityRelationship Name="user_cr916_project" />
+</EntityRelationships>

@@ -1,0 +1,841 @@
+{
+  "personasAndUserStories": [
+    {
+      "user": {
+        "id": "User",
+        "name": "User",
+        "description": "Person who uses the application to search for company information",
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO/SURBVHgBzVc5bxRLEP66e4413sXYaz/zeH7oPb0jAOEEiYCABAmJCImAAJAQ/AYkEhIifgEiQUQQIyERIAJEyBWAIAGJRWCOZW1hr/eYY2eaql4Py7E7B8YStdszPT099X1dXV3VLTQJcgh3i+MYURSZOz8nnwohTJFSmqKUMs95RGQR4NdhGBrgnFyNWJYF27YziYwkkAD3ej2sR7KIDCXATZ7nFRpxmjB4qVQaSkJuNHiWTpm340aRkFkdNpqElVTY4YqAB506wvpVbKkKRJXjiMVMru8S53YcZ0CAG4t6+5vHF1HFddiTv0OKCD5O5/6WsZKVYaaAGRURr/Ueq68JXFjQ7QhK3yNFjUI6Ekz5I6NfeHQJk5sjuI5NBDqAr2GJG4V0JIFNclgtIquNR/Dr1zBRdqAo7MYB+c3HNlR8m0bzMrceBmcSwvd9nWaB1rtbEMEzstlbhK3nCFZrKKkY5dIYbKs/h5YjIWbKVCEP780hxiy0/Q9i91/03P0jdXOUFN1uV4+yQu3hBbjNy/ht2iYTU0Sjn47pGlPS4QTEnbidiqIOwqaKjCEMKyqVcYTlUwjVkaH6TfJKW3qdRg3BCmU9j5j2bMjIIodTUAm4sSX9iX8Uki91KFu2yctbQNykd8s+1OqDkfqND6QRmJs/gaVGGYvvPbDTai0wgBbo22StTfcLW4iCAnQUw1u20VXH0wkgRSa27cIfe89i4RWwVGcSvAeAAerDfy88HeSa8AMHwfbzEJX5NAiaWvoizQpbdx4grQoLd87AdgJUp13yfhjTGwZ6AGx8weHpkIi2n4M1uRtpYgJRnp3L1h37MTl/EivNgHZDX5BNwNcepaRaxUK87RDUzL5MvWu7KIk84oxPE15/CgYTMCj9FUHXTWXoif9z6TSrgPdveaTZeArH5eUn+yNf834ubBRtnFAb/1C6lksnE7D4kuUHLFH7LZyS7E87dY0jyohdimY9CsOuIHLCrH8VUHTLGRF58MYJuZKVD/yVGuxxZUYc+kCX1vnS4hQ8SgWO1cCWWVo1VYWxLhEI31FjOriJgoRt0jGnxiwC2neIhEQnEuh6U5B/HcOfBw+D53/p8S18uH8JnY8LmKUoNCamgPFUdQaT5fOmNAiCVBLt+gss3r2CzXP/YWLnIUh301fvw3YTy09uQreeobrnKFTlb6SNPtmQfCbAN0pMKJodi8q3O2T55QvXdZF3Wf4M8K8IbDSJUWcDOazjzyaRdjD5NY9m6yWSxJZ1HU6HEclzPGfgJLrmkU9p3xPLWDH26wAAAABJRU5ErkJggg=="
+      },
+      "userStories": [
+        {
+          "id": "us01",
+          "rawDescription": "As a User, I need to input a company name so that I can search for information about the company.",
+          "description": "Input a company name so that I can search for information about the company.",
+          "priority": "B",
+          "userType": "User"
+        },
+        {
+          "id": "us02",
+          "rawDescription": "As a User, I need to click a search button so that I can initiate the company information search.",
+          "description": "Click a search button so that I can initiate the company information search.",
+          "priority": "B",
+          "userType": "User"
+        },
+        {
+          "id": "us03",
+          "rawDescription": "As a User, I need to view the company description so that I can understand what the company does.",
+          "description": "View the company description so that I can understand what the company does.",
+          "priority": "B",
+          "userType": "User"
+        },
+        {
+          "id": "us04",
+          "rawDescription": "As a User, I need to view the company's projects or products so that I can learn about their offerings.",
+          "description": "View the company's projects or products so that I can learn about their offerings.",
+          "priority": "B",
+          "userType": "User"
+        },
+        {
+          "id": "us05",
+          "rawDescription": "As a User, I need to view job openings at the company so that I can explore employment opportunities.",
+          "description": "View job openings at the company so that I can explore employment opportunities.",
+          "priority": "B",
+          "userType": "User"
+        },
+        {
+          "id": "us06",
+          "rawDescription": "As a User, I need to view company news so that I can stay updated on their current activities.",
+          "description": "View company news so that I can stay updated on their current activities.",
+          "priority": "B",
+          "userType": "User"
+        },
+        {
+          "id": "us07",
+          "rawDescription": "As a User, I need to use a Copilot chat feature so that I can request information processing based on the retrieved data.",
+          "description": "Use a Copilot chat feature so that I can request information processing based on the retrieved data.",
+          "priority": "P",
+          "userType": "User"
+        },
+        {
+          "id": "us08",
+          "rawDescription": "As a User, I need the application to use data mining techniques so that it can retrieve accurate and relevant information.",
+          "description": "Use data mining techniques so that it can retrieve accurate and relevant information.",
+          "priority": "B",
+          "userType": "User"
+        },
+        {
+          "id": "us09",
+          "rawDescription": "As a User, I need the retrieved information to be parsed and populated into text fields so that I can easily read and understand it.",
+          "description": "Have the retrieved information parsed and populated into text fields so that I can easily read and understand it.",
+          "priority": "B",
+          "userType": "User"
+        }
+      ]
+    }
+  ],
+  "entitiesAndRelationships": {
+    "entities": [
+      {
+        "entityName": "Company Information",
+        "description": "Stores the retrieved information about the company, including its name, description, projects, job openings, and news.",
+        "columns": [
+          "Company ID",
+          "Company Name",
+          "Description",
+          "Projects",
+          "Job Openings",
+          "News"
+        ],
+        "userStories": [
+          "us01",
+          "us02",
+          "us03",
+          "us04",
+          "us05",
+          "us06",
+          "us07",
+          "us08",
+          "us09"
+        ],
+        "userConfirmed": false,
+        "generated": true
+      }
+    ],
+    "relationships": [
+      {
+        "from": "Company Information",
+        "relationship": "OneToMany",
+        "to": "Company Information"
+      }
+    ]
+  },
+  "entitiesCollection": [
+    {
+      "EntityDefinition": {
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "IsPrimaryName": true,
+            "Format": "Text",
+            "MaxLength": 100,
+            "AttributeType": "String",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Company Name",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "ApplicationRequired",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_CompanyName",
+            "MetadataId": "af4bb590-9e22-4e7d-8eb6-f748f7325afb",
+            "FormatName": {
+              "Value": "Text"
+            },
+            "AttributeTypeName": {
+              "Value": "StringType"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "IsPrimaryName": false,
+            "Format": "TextArea",
+            "MaxLength": 100,
+            "AttributeType": "String",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Description",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_Description",
+            "MetadataId": "e0745603-a786-4004-a591-99199a85d9b6",
+            "FormatName": {
+              "Value": "TextArea"
+            },
+            "AttributeTypeName": {
+              "Value": "StringType"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata",
+            "OptionSet": {
+              "Options": [
+                {
+                  "Value": 421510000,
+                  "Label": {
+                    "LocalizedLabels": [
+                      {
+                        "Label": "Project A",
+                        "LanguageCode": 1033
+                      }
+                    ]
+                  },
+                  "IsHidden": false
+                },
+                {
+                  "Value": 421510001,
+                  "Label": {
+                    "LocalizedLabels": [
+                      {
+                        "Label": "Project B",
+                        "LanguageCode": 1033
+                      }
+                    ]
+                  },
+                  "IsHidden": false
+                },
+                {
+                  "Value": 421510002,
+                  "Label": {
+                    "LocalizedLabels": [
+                      {
+                        "Label": "Project C",
+                        "LanguageCode": 1033
+                      }
+                    ]
+                  },
+                  "IsHidden": false
+                },
+                {
+                  "Value": 421510003,
+                  "Label": {
+                    "LocalizedLabels": [
+                      {
+                        "Label": " Project B",
+                        "LanguageCode": 1033
+                      }
+                    ]
+                  },
+                  "IsHidden": false
+                },
+                {
+                  "Value": 421510004,
+                  "Label": {
+                    "LocalizedLabels": [
+                      {
+                        "Label": " Project C",
+                        "LanguageCode": 1033
+                      }
+                    ]
+                  },
+                  "IsHidden": false
+                }
+              ],
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Projects",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "IsGlobal": false,
+              "OptionSetType": "Picklist",
+              "Name": "cr916_companyinformation1_cr916_projects"
+            },
+            "AttributeType": "Virtual",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Projects",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_Projects",
+            "MetadataId": "6c49c3c0-36b2-4cb8-9a82-ed94a14a1cc3",
+            "AttributeTypeName": {
+              "Value": "MultiSelectPicklistType"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
+            "Format": "None",
+            "AttributeType": "Integer",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Job Openings",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_JobOpenings",
+            "MetadataId": "0b422463-db05-4d6f-91c2-c77c93036f30",
+            "AttributeTypeName": {
+              "Value": "IntegerType"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "IsPrimaryName": false,
+            "Format": "Text",
+            "MaxLength": 100,
+            "AttributeType": "String",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "News",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_News",
+            "MetadataId": "93063242-4697-4816-b8ca-5e4a2a72c8f2",
+            "FormatName": {
+              "Value": "Text"
+            },
+            "AttributeTypeName": {
+              "Value": "StringType"
+            }
+          }
+        ],
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of company information",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Company Informations",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Company Information",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "OwnershipType": "UserOwned",
+        "SchemaName": "cr916_CompanyInformation1",
+        "HasNotes": true,
+        "HasActivities": false,
+        "MetadataId": "0ee59c6c-78b5-4dfd-beb9-638b5cb114a6"
+      },
+      "SampleData": [
+        {
+          "cr916_companyname": "Tech Corp",
+          "cr916_description": "Leading tech company",
+          "cr916_projects": "421510000,421510001",
+          "cr916_jobopenings": 3,
+          "cr916_news": "New product launch",
+          "cr916_companyinformation1id": "700442d1-5447-4df7-916a-a4ee35daaf8b"
+        },
+        {
+          "cr916_companyname": "Health Inc",
+          "cr916_description": "Healthcare solutions provider",
+          "cr916_projects": "421510002",
+          "cr916_jobopenings": 5,
+          "cr916_news": "Partnership with local clinics",
+          "cr916_companyinformation1id": "88bf2ed7-5746-45ce-aad5-8a3aa39de9ec"
+        },
+        {
+          "cr916_companyname": "Finance LLC",
+          "cr916_description": "Financial services",
+          "cr916_projects": "421510000",
+          "cr916_jobopenings": 2,
+          "cr916_news": "Quarterly earnings report",
+          "cr916_companyinformation1id": "5fba02cc-640f-4f22-85dc-d8254e987939"
+        },
+        {
+          "cr916_companyname": "Edu Solutions",
+          "cr916_description": "Education technology",
+          "cr916_projects": "421510001,421510002",
+          "cr916_jobopenings": 4,
+          "cr916_news": "New online course available",
+          "cr916_companyinformation1id": "6c60300c-fa55-4a4e-94d5-c672d85d8f64"
+        },
+        {
+          "cr916_companyname": "Green Energy",
+          "cr916_description": "Renewable energy solutions",
+          "cr916_projects": "421510000",
+          "cr916_jobopenings": 1,
+          "cr916_news": "Expansion into new markets",
+          "cr916_companyinformation1id": "61c87a35-d0d4-4ec4-883d-3f6d83e48368"
+        }
+      ]
+    },
+    {
+      "EntityDefinition": {
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "IsPrimaryName": true,
+            "Format": "Text",
+            "MaxLength": 100,
+            "AttributeType": "String",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Project Name",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "ApplicationRequired",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_ProjectName",
+            "MetadataId": "9cc58185-078e-467d-b9e2-7fec9952969a",
+            "FormatName": {
+              "Value": "Text"
+            },
+            "AttributeTypeName": {
+              "Value": "StringType"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "Targets": [
+              "cr916_companyinformation1"
+            ],
+            "Format": "None",
+            "AttributeType": "Lookup",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Company Information",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_CompanyID",
+            "MetadataId": "8c40e481-400e-4fee-a489-d15888931caf",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            }
+          }
+        ],
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of projects associated with companies",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Projects",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Project",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "ManyToOneRelationships": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade"
+            },
+            "ReferencedAttribute": "cr916_companyinformationid",
+            "ReferencedEntity": "cr916_companyinformation1",
+            "ReferencingAttribute": "cr916_companyid",
+            "ReferencingEntity": "cr916_project",
+            "SchemaName": "cr916_project_cr916_companyid_cr916_companyinformation1",
+            "MetadataId": "70ade991-9688-4343-a17f-5375403aa9e0",
+            "RelationshipType": "OneToManyRelationship"
+          }
+        ],
+        "OwnershipType": "UserOwned",
+        "SchemaName": "cr916_Project",
+        "HasNotes": true,
+        "HasActivities": false,
+        "MetadataId": "74425e23-d91f-4c5f-b35a-aaaf8abe9e78"
+      },
+      "SampleData": [
+        {
+          "cr916_projectid": "7a9d3148-c207-4b1c-9aad-20abfe2ea416",
+          "cr916_projectname": "Project A",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(700442d1-5447-4df7-916a-a4ee35daaf8b)"
+        },
+        {
+          "cr916_projectid": "c9f28485-e5b7-4c92-a655-5eee22896f9a",
+          "cr916_projectname": "Project B",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(700442d1-5447-4df7-916a-a4ee35daaf8b)"
+        },
+        {
+          "cr916_projectid": "d554edb9-810d-4dca-9a2b-b0ba767a354f",
+          "cr916_projectname": "Project C",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(88bf2ed7-5746-45ce-aad5-8a3aa39de9ec)"
+        },
+        {
+          "cr916_projectid": "36b4e822-1a02-4be6-819a-79bacbc3cb52",
+          "cr916_projectname": "Project A",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(5fba02cc-640f-4f22-85dc-d8254e987939)"
+        },
+        {
+          "cr916_projectid": "166b3e63-7873-4877-a9f1-71de82c53925",
+          "cr916_projectname": "Project B",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(6c60300c-fa55-4a4e-94d5-c672d85d8f64)"
+        }
+      ]
+    },
+    {
+      "EntityDefinition": {
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "IsPrimaryName": true,
+            "Format": "Text",
+            "MaxLength": 100,
+            "AttributeType": "String",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Job Title",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "ApplicationRequired",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_JobTitle",
+            "MetadataId": "d2907674-6cd7-41a1-8e28-6d6c0a03c537",
+            "FormatName": {
+              "Value": "Text"
+            },
+            "AttributeTypeName": {
+              "Value": "StringType"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "Targets": [
+              "cr916_companyinformation1"
+            ],
+            "Format": "None",
+            "AttributeType": "Lookup",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Company Information",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_CompanyID",
+            "MetadataId": "394b6c18-526d-4801-b5ea-524e95f4ab72",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.MoneyAttributeMetadata",
+            "Precision": 0,
+            "PrecisionSource": 0,
+            "AttributeType": "Money",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Salary",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_Salary",
+            "MetadataId": "57934028-02f1-486f-840b-3919dd268e9b",
+            "AttributeTypeName": {
+              "Value": "MoneyType"
+            }
+          }
+        ],
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of job openings at companies",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Job Openings",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Job Opening",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "ManyToOneRelationships": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade"
+            },
+            "ReferencedAttribute": "cr916_companyinformationid",
+            "ReferencedEntity": "cr916_companyinformation1",
+            "ReferencingAttribute": "cr916_companyid",
+            "ReferencingEntity": "cr916_jobopening",
+            "SchemaName": "cr916_jobopening_cr916_companyid_cr916_companyinformation1",
+            "MetadataId": "df80c2bd-c851-410d-9bc2-d92a0f2d009e",
+            "RelationshipType": "OneToManyRelationship"
+          }
+        ],
+        "OwnershipType": "UserOwned",
+        "SchemaName": "cr916_JobOpening",
+        "HasNotes": true,
+        "HasActivities": false,
+        "MetadataId": "ffd4c593-0f4d-4891-b017-45013b1413cb"
+      },
+      "SampleData": [
+        {
+          "cr916_jobopeningid": "be2ae0e4-e929-4b60-9207-e76d486dce0b",
+          "cr916_jobtitle": "Software Engineer",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(700442d1-5447-4df7-916a-a4ee35daaf8b)",
+          "cr916_salary": 80000
+        },
+        {
+          "cr916_jobopeningid": "8cbbeac0-4146-4936-9f17-3736a2f4cd58",
+          "cr916_jobtitle": "Data Analyst",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(88bf2ed7-5746-45ce-aad5-8a3aa39de9ec)",
+          "cr916_salary": 60000
+        },
+        {
+          "cr916_jobopeningid": "76e77cfc-920f-43cf-a51e-6e8f423067d2",
+          "cr916_jobtitle": "Financial Advisor",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(5fba02cc-640f-4f22-85dc-d8254e987939)",
+          "cr916_salary": 70000
+        },
+        {
+          "cr916_jobopeningid": "a7a25479-1901-4384-8c79-7a1c991516ac",
+          "cr916_jobtitle": "Project Manager",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(6c60300c-fa55-4a4e-94d5-c672d85d8f64)",
+          "cr916_salary": 75000
+        },
+        {
+          "cr916_jobopeningid": "1568f234-05ff-4c38-a25c-e4397c7c9064",
+          "cr916_jobtitle": "Sales Executive",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(61c87a35-d0d4-4ec4-883d-3f6d83e48368)",
+          "cr916_salary": 50000
+        }
+      ]
+    },
+    {
+      "EntityDefinition": {
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "IsPrimaryName": true,
+            "Format": "Text",
+            "MaxLength": 100,
+            "AttributeType": "String",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Headline",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "ApplicationRequired",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_Headline",
+            "MetadataId": "01d2df13-348b-4246-a016-aedc39e37a7d",
+            "FormatName": {
+              "Value": "Text"
+            },
+            "AttributeTypeName": {
+              "Value": "StringType"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "Targets": [
+              "cr916_companyinformation1"
+            ],
+            "Format": "None",
+            "AttributeType": "Lookup",
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Company Information",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "IsValidODataAttribute": false,
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true
+            },
+            "SchemaName": "cr916_CompanyID",
+            "MetadataId": "c712f602-284f-486c-9a57-e55b52d1491e",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            }
+          }
+        ],
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of news articles related to companies",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Newses",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "News",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "ManyToOneRelationships": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade"
+            },
+            "ReferencedAttribute": "cr916_companyinformationid",
+            "ReferencedEntity": "cr916_companyinformation1",
+            "ReferencingAttribute": "cr916_companyid",
+            "ReferencingEntity": "cr916_news",
+            "SchemaName": "cr916_news_cr916_companyid_cr916_companyinformation1",
+            "MetadataId": "29b9d5aa-5338-4ce5-b1fa-83eb7c19ef70",
+            "RelationshipType": "OneToManyRelationship"
+          }
+        ],
+        "OwnershipType": "UserOwned",
+        "SchemaName": "cr916_News",
+        "HasNotes": true,
+        "HasActivities": false,
+        "MetadataId": "2c0c5f1d-72c9-4e85-8bde-7e4a364b6a47"
+      },
+      "SampleData": [
+        {
+          "cr916_newsid": "618a1323-dba7-4049-85bf-5d3392b80141",
+          "cr916_headline": "Tech Corp launches new product",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(700442d1-5447-4df7-916a-a4ee35daaf8b)"
+        },
+        {
+          "cr916_newsid": "ecb68a49-3cff-4555-8bf0-ca4a4e309d15",
+          "cr916_headline": "Health Inc partners with clinics",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(88bf2ed7-5746-45ce-aad5-8a3aa39de9ec)"
+        },
+        {
+          "cr916_newsid": "cf6f3121-47f4-48ff-81b2-9e5a512a91c2",
+          "cr916_headline": "Finance LLC reports earnings",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(5fba02cc-640f-4f22-85dc-d8254e987939)"
+        },
+        {
+          "cr916_newsid": "8de9e0ec-c562-402f-9f79-f8db77ca40a2",
+          "cr916_headline": "Edu Solutions offers new course",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(6c60300c-fa55-4a4e-94d5-c672d85d8f64)"
+        },
+        {
+          "cr916_newsid": "9e43b5e3-52a8-4406-babd-41523c862d2f",
+          "cr916_headline": "Green Energy expands operations",
+          "cr916_CompanyID@odata.bind": "/cr916_companyinformation1s(61c87a35-d0d4-4ec4-883d-3f6d83e48368)"
+        }
+      ]
+    }
+  ],
+  "artifactIds": [
+    "65185851-eaed-ef11-9342-000d3a5ad680"
+  ],
+  "solutionUniqueName": "CompanyInfoFinderMaxTest"
+}
