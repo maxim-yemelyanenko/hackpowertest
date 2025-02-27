@@ -3,6 +3,7 @@
   <EntityRelationship Name="business_unit_crbdb_precallplanningcase" />
   <EntityRelationship Name="business_unit_crbdb_researchcase" />
   <EntityRelationship Name="crbdb_precallplanningcase_companyprecallrelation_crbdb_researchcase" />
+  <EntityRelationship Name="FileAttachment_crbdb_PreCallPlanningCase_crbdb_ContactFile" />
   <EntityRelationship Name="lk_crbdb_precallplanningcase_createdby" />
   <EntityRelationship Name="lk_crbdb_precallplanningcase_modifiedby" />
   <EntityRelationship Name="lk_crbdb_researchcase_createdby" />
