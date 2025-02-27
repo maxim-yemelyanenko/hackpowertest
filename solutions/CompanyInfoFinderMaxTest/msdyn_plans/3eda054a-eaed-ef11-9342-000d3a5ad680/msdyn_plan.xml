@@ -1,0 +1,20 @@
+<msdyn_plan msdyn_planid="3eda054a-eaed-ef11-9342-000d3a5ad680">
+  <iscustomizable>1</iscustomizable>
+  <msdyn_content mimetype="application/octet-stream">Company Info Finder</msdyn_content>
+  <msdyn_contentschemaversion> 1.0</msdyn_contentschemaversion>
+  <msdyn_description>This solution allows users to search for and retrieve detailed information about companies, including descriptions, projects, job openings, and news, with a Copilot chat feature for additional processing.</msdyn_description>
+  <msdyn_name>Company Info Finder</msdyn_name>
+  <msdyn_prompt>Create an application that takes a company name or its URL as input, conducts research, and retrieves information about the company, including its description, projects, and job openings.
+The application should have a single form with:
+* An input field for the company name
+* A search button
+When the search button is clicked, the application should perform a company information search using data mining techniques with Bing or other methods.
+The retrieved information should be parsed and populated into four large text fields on the form:
+* Company description
+* Projects/products (text format)
+* Job openings (text format)
+* Company news - product announcements or current activities
+Additionally, integrate a Copilot chat feature that allows users to request information processing based on the retrieved data.</msdyn_prompt>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_plan>

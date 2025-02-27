@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{eb05ab89-91f8-480c-85e9-a0cb7cb3e9cc}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{6150edf8-dcdf-4390-93e7-5aab9d0d43fc}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{4df88811-0a2b-4d62-accc-9ae0eac27588}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c264b31d-a705-4bbe-98a3-ff31528b92c4}">
+                        <labels>
+                          <label description="Headline" languagecode="1033" />
+                        </labels>
+                        <control id="cr916_headline" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="cr916_headline" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5ec0daf4-9d51-4d06-93a9-406581234ec9}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d0ba3023-7a24-4c32-948b-be66d4f2faf0}">
+                        <labels>
+                          <label description="Company Information" languagecode="1033" />
+                        </labels>
+                        <control id="cr916_companyid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="cr916_companyid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

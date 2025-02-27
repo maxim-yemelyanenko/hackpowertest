@@ -1,0 +1,13 @@
+<msdyn_planartifact msdyn_planartifactid="65185851-eaed-ef11-9342-000d3a5ad680">
+  <iscustomizable>1</iscustomizable>
+  <msdyn_artifactmetadata mimetype="application/octet-stream">undefined</msdyn_artifactmetadata>
+  <msdyn_artifactmetadataschemaversion>1.0</msdyn_artifactmetadataschemaversion>
+  <msdyn_artifactstatus>419550001</msdyn_artifactstatus>
+  <msdyn_description>An app for users to search and retrieve detailed information about companies, including descriptions, projects, job openings, news, and a Copilot chat feature.</msdyn_description>
+  <msdyn_name>The Company Info Search with Copilot</msdyn_name>
+  <msdyn_proposal mimetype="application/octet-stream">The Company Info Search with Copilot</msdyn_proposal>
+  <msdyn_proposalschemaversion>1.0</msdyn_proposalschemaversion>
+  <msdyn_type>PowerAppsCanvasApp</msdyn_type>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_planartifact>

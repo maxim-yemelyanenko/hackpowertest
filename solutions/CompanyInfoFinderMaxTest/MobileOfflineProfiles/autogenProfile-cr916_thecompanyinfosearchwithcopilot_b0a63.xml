@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MobileOfflineProfile MobileOfflineProfileId="b241417a-ebed-ef11-9342-000d3a5ad680" Name="autogenProfile-cr916_thecompanyinfosearchwithcopilot_b0a63" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MobileOfflineProfileItems>
+    <MobileOfflineProfileItem MobileOfflineProfileItemId="b541417a-ebed-ef11-9342-000d3a5ad680" Name="cr916_companyinformation1">
+      <MobileOfflineProfileItemAssociations />
+      <MobileOfflineProfileItemId>{B541417A-EBED-EF11-9342-000D3A5AD680}</MobileOfflineProfileItemId>
+      <RegardingObjectId>{B241417A-EBED-EF11-9342-000D3A5AD680}</RegardingObjectId>
+      <Name>cr916_companyinformation1</Name>
+      <RecordDistributionCriteria>1</RecordDistributionCriteria>
+      <RecordsOwnedByMe>0</RecordsOwnedByMe>
+      <RecordsOwnedByMyTeam>0</RecordsOwnedByMyTeam>
+      <RecordsOwnedByMyBusinessUnit>0</RecordsOwnedByMyBusinessUnit>
+      <SelectedColumns>[]</SelectedColumns>
+      <ProfileItemEntityFilter></ProfileItemEntityFilter>
+      <EntitySchemaName>cr916_CompanyInformation1</EntitySchemaName>
+    </MobileOfflineProfileItem>
+  </MobileOfflineProfileItems>
+  <MobileOfflineProfileId>{b241417a-ebed-ef11-9342-000d3a5ad680}</MobileOfflineProfileId>
+  <Name>autogenProfile-cr916_thecompanyinfosearchwithcopilot_b0a63</Name>
+</MobileOfflineProfile>

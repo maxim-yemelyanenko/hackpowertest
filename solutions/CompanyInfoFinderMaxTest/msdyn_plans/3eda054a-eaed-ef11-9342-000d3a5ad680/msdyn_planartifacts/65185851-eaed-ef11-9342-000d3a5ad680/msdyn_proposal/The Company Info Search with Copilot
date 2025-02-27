@@ -1,0 +1,76 @@
+{
+  "name": "The Company Info Search with Copilot",
+  "description": "An app for users to search and retrieve detailed information about companies, including descriptions, projects, job openings, news, and a Copilot chat feature.",
+  "typesOfUsers": [
+    "User"
+  ],
+  "tableSchemaNames": [
+    "cr916_CompanyInformation1"
+  ],
+  "userStories": [
+    {
+      "id": "us01",
+      "rawDescription": "As a User, I need to input a company name so that I can search for information about the company.",
+      "description": "Input a company name so that I can search for information about the company.",
+      "priority": "B",
+      "userType": "User"
+    },
+    {
+      "id": "us02",
+      "rawDescription": "As a User, I need to click a search button so that I can initiate the company information search.",
+      "description": "Click a search button so that I can initiate the company information search.",
+      "priority": "B",
+      "userType": "User"
+    },
+    {
+      "id": "us03",
+      "rawDescription": "As a User, I need to view the company description so that I can understand what the company does.",
+      "description": "View the company description so that I can understand what the company does.",
+      "priority": "B",
+      "userType": "User"
+    },
+    {
+      "id": "us04",
+      "rawDescription": "As a User, I need to view the company's projects or products so that I can learn about their offerings.",
+      "description": "View the company's projects or products so that I can learn about their offerings.",
+      "priority": "B",
+      "userType": "User"
+    },
+    {
+      "id": "us05",
+      "rawDescription": "As a User, I need to view job openings at the company so that I can explore employment opportunities.",
+      "description": "View job openings at the company so that I can explore employment opportunities.",
+      "priority": "B",
+      "userType": "User"
+    },
+    {
+      "id": "us06",
+      "rawDescription": "As a User, I need to view company news so that I can stay updated on their current activities.",
+      "description": "View company news so that I can stay updated on their current activities.",
+      "priority": "B",
+      "userType": "User"
+    },
+    {
+      "id": "us07",
+      "rawDescription": "As a User, I need to use a Copilot chat feature so that I can request information processing based on the retrieved data.",
+      "description": "Use a Copilot chat feature so that I can request information processing based on the retrieved data.",
+      "priority": "P",
+      "userType": "User"
+    },
+    {
+      "id": "us08",
+      "rawDescription": "As a User, I need the application to use data mining techniques so that it can retrieve accurate and relevant information.",
+      "description": "Use data mining techniques so that it can retrieve accurate and relevant information.",
+      "priority": "B",
+      "userType": "User"
+    },
+    {
+      "id": "us09",
+      "rawDescription": "As a User, I need the retrieved information to be parsed and populated into text fields so that I can easily read and understand it.",
+      "description": "Have the retrieved information parsed and populated into text fields so that I can easily read and understand it.",
+      "priority": "B",
+      "userType": "User"
+    }
+  ],
+  "version": 1
+}
