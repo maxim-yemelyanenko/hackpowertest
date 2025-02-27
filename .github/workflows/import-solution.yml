@@ -34,6 +34,7 @@ env:
   ENVIRONMENT_URL_TEST: ${{ secrets.ENVIRONMENT_URL_TEST }}
   CLIENT_ID: ${{ secrets.APPLICATION_ID }}
   TENANT_ID: ${{ secrets.TENANT_ID }}
+  GITHUB_ACTIONS_RUNNER_HTTP_TIMEOUT: 300
 
 permissions:
   contents: write
