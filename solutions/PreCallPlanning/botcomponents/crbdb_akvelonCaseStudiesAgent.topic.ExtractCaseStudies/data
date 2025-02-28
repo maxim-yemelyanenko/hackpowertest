@@ -20,34 +20,71 @@ beginDialog:
       variable: Topic.Var_CaseStudies_OutputMessage_Text
       userInput: =Topic.InputMessage.summaryText
       additionalInstructions: |-
-        Input : A structured summary of a company, including its pain points and technical expertise needs.
+        TASK: Retrieve Akvelon expertise matching company needs
         
-        Objective : Identify and summarize Akvelon case studies from the provided web_search results 1-10 that address the company’s challenges.
+        INPUT: A company profile with technical challenges and requirements.
         
-        Instructions :
-        - Cross-reference input with web_search data : Map the company’s pain points and expertise needs to Akvelon’s documented solutions in 1, 3, 6, 7, 10.
-        - Prioritize relevance : Focus on case studies involving:
-            - Data security, API integration, or compliance (e.g., 1, 6).
-            - Scalable data pipelines, AI/ML, or analytics (e.g., 3, 10).
-            - Distributed systems or microservices (e.g., 6, 8).
-        - Structure output :
-            - Case Study Title (with URL from web_search).
-            - Summary : Highlight technical alignment with the input (e.g., tools like Spark/Kafka 3, HIPAA-compliant architectures 1).
-            - Relevance : Explicitly tie the case study to the company’s pain points (e.g., “Akvelon’s experience with healthcare data lakes 10 addresses Hinge Health’s HIPAA compliance needs”).
-        - Tone : Formal, concise, and technical. Avoid speculative claims; only use verifiable details from web_search.
-        - Exclude unrelated content : Ignore case studies outside the scope of the input (e.g., non-technical or marketing-focused entries).
+        OBJECTIVE: DO NOT summarize or restructure the input. Instead, search Akvelon's official website to find and present ONE specific Akvelon case study that directly addresses the company's technical needs.
         
-        Example Output Format :
+        SEARCH PROCESS:
+        1. IDENTIFY key technical requirements from the input:
+           • Industry domain (healthcare, finance, etc.)
+           • Technical challenges (data pipelines, security, etc.)
+           • Required technologies (AI/ML, cloud platforms, etc.)
         
-        Case Study 1
-        Summary : Akvelon implemented a payment system with enhanced data security and fund control, addressing compliance and API reliability.
-        Relevance : Aligns with Hinge Health’s need for HIPAA-compliant data infrastructure and secure API design.
-        URL : <Link to Akvelon Payment System Case Study>
+        2. SEARCH Akvelon's official website for relevant case studies
+           • Focus exclusively on finding Akvelon case studies 
+           • Do not summarize or repeat the input information
+           • Ignore any content not related to Akvelon's technical work
         
-        Case Study 2
-        Summary : Akvelon’s Data and Analytics Accelerators leverage AI/ML and tools like Spark for scalable data pipelines.
-        Relevance : Matches Hinge Health’s requirement for distributed systems and healthcare data lakes.
-        URL : <Link>
+        3. MATCH & SELECT:
+           • Choose ONE case study with strongest technical alignment to input needs
+           • If multiple matches exist, select the one addressing the most critical challenges
+        
+        OUTPUT REQUIREMENTS:
+        1. TITLE: [Exact name of the Akvelon case study]
+        
+        2. TECHNICAL SOLUTION DETAILS:
+           • EMPHASIZE ALL TECHNOLOGIES used in the implementation, including:
+             - Programming languages (Java, Python, C#, etc.)
+             - Cloud platforms (AWS, Azure, GCP)
+             - Frameworks and libraries (React, Angular, TensorFlow, etc.)
+             - Development tools (Docker, Kubernetes, Jenkins)
+             - Databases and data storage solutions (SQL, NoSQL, data lakes)
+           • Include architecture components and technical approaches
+           • Mention specific technical challenges Akvelon overcame
+        
+        3. RELEVANCE TO CLIENT'S NEEDS:
+           • Explicitly connect how Akvelon's work addresses each key pain point
+           • Example: "This case study directly addresses Hinge Health's HIPAA compliance needs by demonstrating Akvelon's experience with healthcare data security"
+        
+        4. EVIDENCE:
+           • Include specific metrics, outcomes, or technical achievements
+           • Quote directly from the case study when possible
+        
+        5. SOURCE: [URL to the specific Akvelon case study]
+        
+        CRITICAL INSTRUCTIONS:
+        - DO NOT repeat or summarize the input company profile
+        - DO NOT create fictional case studies if no relevant match exists
+        - DO NOT include any content not found on Akvelon's official website
+        - FOCUS exclusively on Akvelon's technical expertise and implementations
+        - If no suitable match exists, state this clearly and suggest the closest alternative
+        - HIGHLIGHT ALL TECHNICAL TOOLS AND TECHNOLOGIES used in the case study
+        
+        Example Output Structure:
+        TITLE: Akvelon's Healthcare Data Platform for [Client]
+        
+        TECHNICAL SOLUTION DETAILS:
+        Akvelon implemented a comprehensive healthcare data platform featuring Python, Apache Spark, and AWS S3 for data processing. The architecture included Kubernetes for container orchestration, React.js for the frontend, and MongoDB for secure data storage. The team used Jenkins for CI/CD and implemented HIPAA-compliant security protocols using AWS KMS.
+        
+        RELEVANCE TO CLIENT'S NEEDS:
+        This directly addresses [company]'s need for [specific pain point] by demonstrating Akvelon's expertise in [relevant technology]. Additionally, the case study shows Akvelon's capability to solve [another pain point] through [implementation detail].
+        
+        EVIDENCE:
+        The implementation resulted in [specific metric improvement]. According to the case study: "[direct quote from case study]"
+        
+        SOURCE: [URL from Akvelon's website]
       fileSearchDataSource:
         searchFilesMode:
           kind: DoNotSearchFiles
@@ -240,116 +277,116 @@ beginDialog:
             displayName: Created By (Value)
             description: Unique identifier of the user who created the record.
             visibility: Advanced
-            order: 8
+            order: 11
             type: String
 
           _createdby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
             displayName: Created By (Type)
             description: Unique identifier of the user who created the record.
             visibility: Advanced
-            order: 7
+            order: 10
             type: String
 
           _createdonbehalfby_value:
             displayName: Created By (Delegate) (Value)
             description: Unique identifier of the delegate user who created the record.
             visibility: Advanced
-            order: 6
+            order: 9
             type: String
 
           _createdonbehalfby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
             displayName: Created By (Delegate) (Type)
             description: Unique identifier of the delegate user who created the record.
             visibility: Advanced
-            order: 5
+            order: 8
             type: String
 
           _modifiedby_value:
             displayName: Modified By (Value)
             description: Unique identifier of the user who modified the record.
             visibility: Advanced
-            order: 15
+            order: 18
             type: String
 
           _modifiedby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
             displayName: Modified By (Type)
             description: Unique identifier of the user who modified the record.
             visibility: Advanced
-            order: 14
+            order: 17
             type: String
 
           _modifiedonbehalfby_value:
             displayName: Modified By (Delegate) (Value)
             description: Unique identifier of the delegate user who modified the record.
             visibility: Advanced
-            order: 13
+            order: 16
             type: String
 
           _modifiedonbehalfby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
             displayName: Modified By (Delegate) (Type)
             description: Unique identifier of the delegate user who modified the record.
             visibility: Advanced
-            order: 12
+            order: 15
             type: String
 
           _ownerid_value:
             displayName: Owner (Value)
             description: Owner Id
             visibility: Advanced
-            order: 20
+            order: 23
             type: String
 
           _ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname:
             displayName: Owner (Type)
             description: Owner Id
             visibility: Advanced
-            order: 19
+            order: 22
             type: String
 
           _owningbusinessunit_value:
             displayName: Owning Business Unit (Value)
             description: Unique identifier for the business unit that owns the record
-            order: 22
+            order: 25
             type: String
 
           _owningbusinessunit_value@Microsoft.Dynamics.CRM.lookuplogicalname:
             displayName: Owning Business Unit (Type)
             description: Unique identifier for the business unit that owns the record
-            order: 21
+            order: 24
             type: String
 
           _owningteam_value:
             displayName: Owning Team (Value)
             description: Unique identifier for the team that owns the record.
             visibility: Advanced
-            order: 24
+            order: 27
             type: String
 
           _owningteam_value@Microsoft.Dynamics.CRM.lookuplogicalname:
             displayName: Owning Team (Type)
             description: Unique identifier for the team that owns the record.
             visibility: Advanced
-            order: 23
+            order: 26
             type: String
 
           _owninguser_value:
             displayName: Owning User (Value)
             description: Unique identifier for the user that owns the record.
             visibility: Advanced
-            order: 26
+            order: 29
             type: String
 
           _owninguser_value@Microsoft.Dynamics.CRM.lookuplogicalname:
             displayName: Owning User (Type)
             description: Unique identifier for the user that owns the record.
             visibility: Advanced
-            order: 25
+            order: 28
             type: String
 
           @odata.id:
             displayName: OData Id
             description: OData row id
-            order: 17
+            order: 20
             type: String
 
           crbdb_companydescription:
@@ -370,82 +407,98 @@ beginDialog:
             order: 4
             type: String
 
+          crbdb_contactfile:
+            displayName: ContactFile
+            visibility: Advanced
+            order: 5
+            type: String
+
+          crbdb_contactname:
+            displayName: ContactInfo
+            order: 6
+            type: String
+
           crbdb_jobopenings:
             displayName: JobOpenings
             visibility: Advanced
-            order: 11
+            order: 14
+            type: String
+
+          crbdb_leadinfo:
+            displayName: ContactName
+            order: 7
             type: String
 
           crbdb_outreachmessage:
             displayName: OutreachMessage
             visibility: Advanced
-            order: 18
+            order: 21
             type: String
 
           crbdb_painpoints:
             displayName: PainPoints
             visibility: Advanced
-            order: 27
+            order: 30
             type: String
 
           crbdb_precallplanningcaseid:
             displayName: PreCallPlanningCase
             description: Unique identifier for entity instances
             visibility: Advanced
-            order: 28
+            order: 31
             type: String
 
           crbdb_relevantakvelonexpertise:
             displayName: RelevantAkvelonExpertise
             visibility: Advanced
-            order: 30
+            order: 33
             type: String
 
           crbdb_summary:
             displayName: Summary
             visibility: Advanced
-            order: 33
+            order: 36
             type: String
 
           crbdb_technicalexpertiseneeds:
             displayName: TechnicalExpertiseNeeds
             visibility: Advanced
-            order: 34
+            order: 37
             type: String
 
           createdon:
             displayName: Created On
             description: Date and time when the record was created.
             visibility: Advanced
-            order: 9
+            order: 12
             type: DateTime
 
           importsequencenumber:
             displayName: Import Sequence Number
             description: Sequence number of the import that created this record.
             visibility: Advanced
-            order: 10
+            order: 13
             type: Number
 
           modifiedon:
             displayName: Modified On
             description: Date and time when the record was modified.
             visibility: Advanced
-            order: 16
+            order: 19
             type: DateTime
 
           overriddencreatedon:
             displayName: Record Created On
             description: Date and time that the record was migrated.
             visibility: Advanced
-            order: 29
+            order: 32
             type: DateTime
 
           statecode:
             displayName: Status
             description: Status of the PreCallPlanningCase
             visibility: Advanced
-            order: 31
+            order: 34
             dynamicValuesConfig:
               capability: List
 
@@ -455,7 +508,7 @@ beginDialog:
             displayName: Status Reason
             description: Reason for the status of the PreCallPlanningCase
             visibility: Advanced
-            order: 32
+            order: 35
             dynamicValuesConfig:
               capability: List
 
@@ -465,21 +518,21 @@ beginDialog:
             displayName: Time Zone Rule Version Number
             description: For internal use only.
             visibility: Advanced
-            order: 35
+            order: 38
             type: Number
 
           utcconversiontimezonecode:
             displayName: UTC Conversion Time Zone Code
             description: Time zone code that was in use when the record was created.
             visibility: Advanced
-            order: 36
+            order: 39
             type: Number
 
           versionnumber:
             displayName: Version Number
             description: Version Number
             visibility: Advanced
-            order: 37
+            order: 40
             type: Number
 
       operationId: UpdateOnlyRecordWithOrganization
